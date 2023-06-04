@@ -11,6 +11,7 @@
                 <li><a href="tcas67.php">TCAS67</a></li>
                 <li><a href="contact.php">ติดต่อ</a></li>
                 <li><a href="admin.php">ADMIN</a></li>
+                <button type="submit"><a href=""><i class="fa fa-search"></i></a></button>
             </ul>
         </div>
     </nav>

@@ -39,6 +39,19 @@ header {
                         text-decoration: none;
                     }
                 }
+                
+                > button {
+                    background: #fb7bff;
+                    padding: 1rem;
+                    color: white;
+                    font-size: 17px;
+                    cursor: pointer;
+                    border: none;
+                }
+
+                > button:hover {
+                    background-color: #6b92ff;
+                }
             }
         }      
     }

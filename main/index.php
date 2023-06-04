@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Home</title>
-</head>
+<?php include('../subpage/head.inc.php'); ?>
 
 <body>
-    <?php require 'header.php'; ?>
-    <div class="grid-container">
+    <?php require('../subpage/nav.inc.php'); ?> 
+    <?php require('../subpage/carousel.inc.php'); ?> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+    <!-- <div class="grid-container">
         <section class="left">
             <?php
-            include 'server.php';
+            include ('server.php');
             mysqli_query($conn, 'Use tup_news;');
             $query = mysqli_query($conn, "SELECT * FROM news ORDER BY date DESC;");
             // loop
@@ -67,7 +59,6 @@
                 <li><a href="#">เอกสาร</a></li>
             </ul>
         </section>
-    </div>
-</body>
-
+    </div> -->
+   
 </html>

@@ -8,10 +8,11 @@
     <title>Admin</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <?php include 'header.php' ?>
+    <?php require 'header.php' ?>
     <h1 class="title">ADMIN PANAL</h1>
     <section class="grid-container">
         <div class="menu">

@@ -43,10 +43,13 @@ header {
                 > button {
                     background: #fb7bff;
                     padding: 1rem;
-                    color: white;
                     font-size: 17px;
                     cursor: pointer;
                     border: none;
+
+                    > a {
+                        color: white;
+                    }
                 }
 
                 > button:hover {

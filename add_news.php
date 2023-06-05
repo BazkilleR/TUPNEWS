@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php require 'header.php'; ?>
-    <form name="add_news" action="add_news_db.php" method="post">
+    <form action="add_news_db.php" method="post" enctype="multipart/form-data">
         <!-- topic -->
         <p>หัวข้อ</p>
         <input type="text" name="topic"><br>
@@ -40,8 +40,8 @@
             <option value="schedule">Schedule</option>
         </select><br>
         <!-- photo -->
-        <label for="img">อัปโหลดรูปภาพ</label>
-        <input type="file" name="img" accept="image/jpeg. image/jpg, image/png"><br>
+        <label for="image">อัปโหลดรูปภาพ</label>
+        <input type="file" name="img"><br>
         <!-- submit -->
         <input type="submit" name="submit" value="ลงข่าว">
     </form>

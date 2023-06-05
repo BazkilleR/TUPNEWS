@@ -25,16 +25,20 @@
                 $topic = $dbarr['topic'];
                 $content = $dbarr['content'];
                 $date = $dbarr['date'];
+                $img = $dbarr['img'];
                 if ($count == 0) { ?>
                     <div class="box" id="first-box">
+                        <div class="img">
+                            <img src="<?php echo $img; ?>">
+                        </div>
                         <div class="topic">
-                            <h1 class="topic"><?php echo $topic ?></h1>
+                            <h1 class="topic"><?php echo $topic; ?></h1>
                         </div>
                         <div class="content">
-                            <p class="content"><?php echo $content ?></p>
+                            <p class="content"><?php echo $content; ?></p>
                         </div>
                         <div class="date">
-                            <p class="date"><?php echo $date ?></p>
+                            <p class="date"><?php echo $date; ?></p>
                         </div>
                         <div class="more">
                             <a href="#">เพิ่มเติม</a>
@@ -43,14 +47,17 @@
                 <?php $count++;
                 } else { ?>
                     <div class="box">
+                        <div class="img">
+                            <img src="<?php echo $img; ?>">
+                        </div>
                         <div class="topic">
-                            <h1 class="topic"><?php echo $topic ?></h1>
+                            <h1 class="topic"><?php echo $topic; ?></h1>
                         </div>
                         <div class="content">
-                            <p class="content"><?php echo $content ?></p>
+                            <p class="content"><?php echo $content; ?></p>
                         </div>
                         <div class="date">
-                            <p class="date"><?php echo $date ?></p>
+                            <p class="date"><?php echo $date; ?></p>
                         </div>
                         <div class="more">
                             <a href="#">เพิ่มเติม</a>

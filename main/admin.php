@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <?php require 'header.php' ?>
+    <?php require('header.php'); ?>
     <h1 class="title">ADMIN PANAL</h1>
     <section class="grid-container">
         <div class="menu">

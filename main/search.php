@@ -5,7 +5,7 @@
             $input = $_POST['input'];
 
             if (!empty($input)) {
-                require 'server.php';
+                require('server.php');
                 mysqli_query($conn, 'Use tup_news;');
 
                 $query = "SELECT * FROM news WHERE topic LIKE '%$input%'";
@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <?php require 'header.php' ?>
+    <?php require('header.php'); ?>
     <form name="search" method="post">
         <input type="text" placeholder="Search.." name="input">
         <button type="submit"><a href="#"><i class="fa fa-search"></i></a></button>

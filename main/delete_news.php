@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require 'header.php' ?>
+    <?php require ('header.php'); ?>
     <center>
         <h1>DELETE</h1>
         <form action="delete_news_db.php" method="post">

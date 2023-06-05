@@ -1,7 +1,7 @@
 <?php
     $id = $_POST['id'];
 
-    require 'server.php';
+    require ('server.php');
     mysqli_query($conn, 'Use tup_news;');
     $query = mysqli_query($conn, "DELETE FROM news WHERE id='$id'");
     if ($query) {

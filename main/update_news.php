@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php require 'header.php' ?>
+    <?php require ('header.php'); ?>
     <h1>UPDATE</h1>
     <form action="update_news_db.php" method="post">
         <!-- select id -->

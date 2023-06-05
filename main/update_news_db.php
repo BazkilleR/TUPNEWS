@@ -6,7 +6,7 @@
     $category = $_POST['category'];
     $level = $_POST['level'];
 
-    require 'server.php';
+    require ('server.php');
     mysqli_query($conn, 'Use tup_news;');
     $query = mysqli_query($conn, "UPDATE news SET topic='$topic', descr='$descr', content='$content', category='$category', level='$level', date=NULL WHERE id='$id';");
     if ($query) {

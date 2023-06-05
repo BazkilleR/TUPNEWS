@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <?php require 'header.php'; ?>
+    <?php require('header.php'); ?>
     <section class="flex-container">
         <table>
             <tr>

@@ -12,11 +12,11 @@
 </head>
 
 <body>
-    <?php require 'header.php'; ?>
+    <?php require('header.php'); ?>
     <div class="grid-container">
         <section class="left">
             <?php
-            include 'server.php';
+            include ('server.php');
             mysqli_query($conn, 'Use tup_news;');
             $query = mysqli_query($conn, "SELECT * FROM news ORDER BY date DESC;");
             // loop

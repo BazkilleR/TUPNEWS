@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <?php require 'header.php'; ?>
+    <?php require('header.php'); ?>
     <form action="add_news_db.php" method="post" enctype="multipart/form-data">
         <!-- topic -->
         <p>หัวข้อ</p>

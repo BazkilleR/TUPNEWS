@@ -1,4 +1,5 @@
 <?php
+    // connect database
     require('server.php');
     mysqli_query($conn, "USE tup_news"); 
 

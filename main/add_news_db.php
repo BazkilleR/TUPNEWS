@@ -22,7 +22,7 @@
             move_uploaded_file($_FILES['img']['tmp_name'], $fileImg);
 
             // add input to database
-            $query = "INSERT INTO news (id,topic,descr,content,category,level,date,img) VALUES (NULL,'$topic','$topic','$descr','$content','$level',NULL,'$fileImg')";
+            $query = "INSERT INTO news (id,topic,descr,content,category,level,date,img) VALUES (NULL,'$topic','$descr','$content','$category','$level',NULL,'$fileImg')";
             $result = mysqli_query($conn, $query);
             
             if ($result) {

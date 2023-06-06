@@ -22,6 +22,7 @@
             // loop
             $count = 0;
             while ($dbarr = mysqli_fetch_array($query)) {
+                $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
                 $content = $dbarr['content'];
                 $date = $dbarr['date'];
@@ -41,7 +42,7 @@
                             <p class="date"><?php echo $date; ?></p>
                         </div>
                         <div class="more">
-                            <a href="#">เพิ่มเติม</a>
+                            <?php echo "<a href='show_detail.php?id=" . $id . "'>เพิ่มเติม</a>" ?>
                         </div>
                     </div>
                 <?php $count++;
@@ -60,7 +61,7 @@
                             <p class="date"><?php echo $date; ?></p>
                         </div>
                         <div class="more">
-                            <a href="#">เพิ่มเติม</a>
+                            <?php echo "<a href='show_detail.php?id=" . $id . "'>เพิ่มเติม</a>" ?>
                         </div>
                     </div>
             <?php

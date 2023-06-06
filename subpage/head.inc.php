@@ -12,6 +12,8 @@
     <link href="../css/index.css" rel="stylesheet" >
     <link rel="stylesheet" href="../css/morning_news.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>TUP41</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
 </head>

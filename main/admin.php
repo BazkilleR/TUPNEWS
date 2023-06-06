@@ -21,7 +21,7 @@
                 <th style="width: 25%;">DATE</th>
             </tr>
             <?php
-                require 'server.php';
+                require('server.php');
                 mysqli_query($conn, 'USE tup_news;');
                 $query = mysqli_query($conn, 'SELECT * FROM news;');
                 while ($dbarr = mysqli_fetch_array($query)) {

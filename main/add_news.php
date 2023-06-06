@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Add news</title>
-    <style>
-        input {
-            margin-bottom: 1rem;
-        }
-    </style>
-</head>
+<?php require('../subpage/head.inc.php'); ?>
 <body>
-    <?php require 'header.php'; ?>
-    <form name="add_news" action="add_news_db.php" method="post">
+    <?php require('../subpage/nav.inc.php'); ?>
+    <form action="add_news_db.php" method="post" enctype="multipart/form-data">
         <!-- topic -->
         <p>หัวข้อ</p>
         <input type="text" name="topic"><br>
@@ -40,8 +26,8 @@
             <option value="schedule">Schedule</option>
         </select><br>
         <!-- photo -->
-        <label for="img">อัปโหลดรูปภาพ</label>
-        <input type="file" name="img" accept="image/jpeg. image/jpg, image/png"><br>
+        <label for="image">อัปโหลดรูปภาพ</label>
+        <input type="file" name="img"><br>
         <!-- submit -->
         <input type="submit" name="submit" value="ลงข่าว">
     </form>

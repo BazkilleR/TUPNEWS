@@ -14,47 +14,61 @@
 
 <body>
     <?php require('header.php'); ?>
-    <section class="flex-container">
-        <table>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        <div class="left">
-            <img src="img/5ddfea42-7377-4bef-9ac4-f3bd407d52ab_landing-photo-to-cartoon-img5.avif" alt="">
+    <div class="header-text">
+        <h1>ข่าวตอนเช้า</h1>
+    </div>
+    <div class="date-filter">
+            <input type="date" name="date">
         </div>
-        <div class="right">
-            <?php
-                include 'server.php';
-                mysqli_query($conn, 'Use tup_news;');
+    <div class="flex-container">
+        <?php
+        include 'server.php';
+        mysqli_query($conn, 'Use tup_news;');
 
-                $query = mysqli_query($conn, "SELECT * FROM news WHERE category='morning' ORDER BY date DESC;");
-                // loop
-                $count = 0;
-                while ($dbarr = mysqli_fetch_array($query)) {
-                    $topic = $dbarr['topic'];
-                    $content = $dbarr['content'];
-                    $date = $dbarr['date']; ?>
-                    <div class="box">
-                        <div class="topic">
-                            <h1 class="topic"><?php echo $topic ?></h1>
-                        </div>
-                        <div class="content">
-                            <p class="content"><?php echo $content ?></p>
-                        </div>
-                        <div class="date">
-                            <p class="date"><?php echo $date ?></p>
-                        </div>
-                        <div class="more">
-                            <a href="#">เพิ่มเติม</a>
-                        </div>
-                    </div> <?php
-                } // end loop
-                mysqli_close($conn);
-            ?>
+        $query = mysqli_query($conn, "SELECT * FROM news WHERE category='morning' ORDER BY date DESC;");
+
+        // get data
+        while ($dbarr = mysqli_fetch_array($query)) {
+            $topic = $dbarr['topic'];
+            $descr = $dbarr['descr'];
+            $category = $dbarr['category'];
+            $date = $dbarr['date'];
+            $img = $dbarr['img'];
+        ?>
+        
+        <!-- output -->
+        <div class="box">
+            <div class="img">
+                <img src="<?php echo $img ?>">
+            </div>
+            <div class="content">
+                <div class="topic-descr">
+                    <div class="topic">
+                        <a href="#">
+                            <h4><?php echo $topic ?></h4>
+                        </a>
+                    </div>
+                    <div class="descr">
+                        <p><?php echo $descr ?></p>
+                    </div>
+                </div>
+                <div class="category-date">
+                    <div class="category">
+                        <p><?php echo $category ?></p>
+                    </div>
+                    <div class="date">
+                        <p><?php echo $date ?></p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!-- end loop -->
+        <?php
+        } 
+        mysqli_close($conn);
+        ?>
+    </div>
 </body>
 
 </html>

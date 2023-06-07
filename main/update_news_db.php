@@ -1,7 +1,6 @@
 <?php
 // connect database
 require('server.php');
-mysqli_query($conn, 'Use tup_news;');
 
 if (isset($_GET['id'])) { // check id input
 
@@ -24,7 +23,6 @@ if (isset($_GET['id'])) { // check id input
             $query = "SELECT img FROM news WHERE id='$id'";
             $del_img = mysqli_query($conn, $query);
             $img_path = mysqli_fetch_array($del_img);
-            echo $img_path['img'] . "<br>";
             $del_img = unlink($img_path['img']);
 
             // save image file in img dir
@@ -38,9 +36,9 @@ if (isset($_GET['id'])) { // check id input
         echo 'You do not upload photo.<br>';
     }
 
+    // new img path
     $target_dir = "img/";
     $fileImg = $target_dir . $fileName;
-    echo $fileImg . "<br>";
 
     // update data
     $query =    "UPDATE news SET 

@@ -4,7 +4,6 @@
     if (!empty($id)) {
         // connect database
         require ('server.php');
-        mysqli_query($conn, 'Use tup_news;');
 
         // delete photo file
         $query = "SELECT img FROM news WHERE id='$id'";

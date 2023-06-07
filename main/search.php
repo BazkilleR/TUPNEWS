@@ -5,12 +5,15 @@
             $input = $_POST['input'];
 
             if (!empty($input)) {
-                require('server.php');
-                mysqli_query($conn, 'Use tup_news;');
 
+                // connect database
+                require('server.php');
+
+                // select data
                 $query = "SELECT * FROM news WHERE topic LIKE '%$input%'";
                 $result = mysqli_query($conn, $query);
 
+                // output
                 $output .= "<h1>RESULT of '" . $input . "'</h1>";
 
                 if (mysqli_num_rows($result) < 1) {

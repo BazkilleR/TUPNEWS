@@ -1,8 +1,11 @@
 <?php
+// connect sdatabase
 require 'server.php';
-mysqli_query($conn, 'Use tup_news');
 
-$id = $_GET['id'];
+// get id from url
+$id = $_GET['id']; 
+
+// select data
 $query = "SELECT * FROM news WHERE id='$id'";
 $result = mysqli_query($conn, $query);
 if ($result) {

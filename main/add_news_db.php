@@ -1,7 +1,6 @@
 <?php
     // connect database
     require('server.php');
-    mysqli_query($conn, "USE tup_news"); 
 
     // get input
     $topic = $_POST['topic'];
@@ -14,16 +13,19 @@
     $fileName = basename($_FILES['img']['name']); 
     $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
 
+    // check NULL input
     if (!empty($topic) || !empty($descr) || !empty($content) || !empty($category) || !empty($level) || !empty($fileName)) {
         // check img type
         if ($fileType == 'jpg' || $fileType == 'jpeg' || $fileType == 'png') {
+
             // save image file in img dir
             $target_dir = "img/";
             $fileImg = $target_dir . $fileName; 
             move_uploaded_file($_FILES['img']['tmp_name'], $fileImg);
 
             // add input to database
-            $query = "INSERT INTO news (id,topic,descr,content,category,level,date,img) VALUES (NULL,'$topic','$descr','$content','$category','$level',NULL,'$fileImg')";
+            $query = "  INSERT INTO news (id,topic,descr,content,category,level,date,img)
+                        VALUES (NULL,'$topic','$descr','$content','$category','$level',NULL,'$fileImg')";
             $result = mysqli_query($conn, $query);
             
             if ($result) {

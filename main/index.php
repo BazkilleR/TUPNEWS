@@ -16,58 +16,36 @@
     <div class="grid-container">
         <section class="left">
             <?php
-            include ('server.php');
-            mysqli_query($conn, 'Use tup_news;');
+            // connect database
+            include('server.php');
+            mysqli_query($conn, 'Use tup_news');
+
             $query = mysqli_query($conn, "SELECT * FROM news ORDER BY date DESC;");
-            // loop
-            $count = 0;
+            // loop get data
             while ($dbarr = mysqli_fetch_array($query)) {
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
                 $content = $dbarr['content'];
                 $date = $dbarr['date'];
                 $img = $dbarr['img'];
-                if ($count == 0) { ?>
-                    <div class="box" id="first-box">
-                        <div class="img">
-                            <img src="<?php echo $img; ?>">
-                        </div>
-                        <div class="topic">
-                            <h1 class="topic"><?php echo $topic; ?></h1>
-                        </div>
-                        <div class="content">
-                            <p class="content"><?php echo $content; ?></p>
-                        </div>
-                        <div class="date">
-                            <p class="date"><?php echo $date; ?></p>
-                        </div>
-                        <div class="more">
-                            <?php echo "<a href='show_detail.php?id=" . $id . "'>เพิ่มเติม</a>" ?>
-                        </div>
+                $category = $dbarr['category'];
+            ?>
+                <div class="box">
+                    <div class="img">
+                        <img src="<?php echo $img; ?>">
                     </div>
-                <?php $count++;
-                } else { ?>
-                    <div class="box">
-                        <div class="img">
-                            <img src="<?php echo $img; ?>">
-                        </div>
-                        <div class="topic">
-                            <h1 class="topic"><?php echo $topic; ?></h1>
-                        </div>
-                        <div class="content">
-                            <p class="content"><?php echo $content; ?></p>
-                        </div>
-                        <div class="date">
-                            <p class="date"><?php echo $date; ?></p>
-                        </div>
-                        <div class="more">
-                            <?php echo "<a href='show_detail.php?id=" . $id . "'>เพิ่มเติม</a>" ?>
-                        </div>
+                    <div class="topic">
+                        <h1 class="topic"><?php echo "<a href='show_detail.php?id=" . $id . "'>" . $topic . "</a>" ?></h1>
                     </div>
+                    <div class="category-date">
+                        <p class="category"><?php echo $category ?></>
+                        <p class="date"><?php echo $date ?></p>
+                    </div>
+                </div>
             <?php
-                }
             } // end loop
-            mysqli_close($conn); ?>
+            mysqli_close($conn);
+            ?>
         </section>
         <section class="right">
             <ul>

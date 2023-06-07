@@ -1,10 +1,11 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+html,
+body {
     height: 100%;
 }
 
@@ -15,49 +16,67 @@ body, html {
     width: 60%;
     margin: 1rem auto;
 
-    > .left {
+    >.left {
         display: grid;
         grid-template-columns: auto auto auto;
         gap: 1.5rem;
 
-        > .box {
-            height: 400px;    
-            text-align: center;
-            border: 1px solid red;
-            border-radius: 10px;
+        >.box {
+            margin: 1rem auto;
+            height: 300px;
+            width: 200px;
+            overflow: hidden;
 
-            > div {
-                word-break: break-all;
-            } 
+            >.img {
+                height: 50%;
+                overflow: hidden;
+
+                >img {
+                    width: 100%;
+                }
+            }
+
+            >.content {
+                margin: 0.5rem 0;
+
+                >a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                >a:hover {
+                    color: #db00e6;
+                }
+            }
+
+            >.category-date {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.8rem;
+
+                >.category {
+                    color: #db00e6;
+                }
+            }
         }
-
-        > #first-box {
-            grid-column: 1 / span 2;
-            border: 1px solid red;
-        } 
     }
 
-    
-
-    > .right {
-        border: 1px solid red;
-
-        > ul {
+    >.right {
+        >ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             background-color: #fb7bff;
 
-             > li {
+            >li {
                 text-align: center;
                 padding: 0.75rem 0;
 
-                > a {
+                >a {
                     text-decoration: none;
                     color: white;
                 }
-             }
+            }
         }
     }
 }
-

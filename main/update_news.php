@@ -14,7 +14,7 @@ if (isset($_POST['id'])) {
     $dbarr = mysqli_fetch_array($result);
 
     $output .= "
-    <form action='update_news_db.php?id=" . $id . "' method='post' enctype='multipart/form-data'>
+    <form action='update_news_db.php?id=".$id."' method='post' enctype='multipart/form-data'>
         <p>หัวข้อ</p>
         <input type='text' name='topic' value='" . $dbarr['topic'] . "'><br>
         <p>คำอธิบาย</p>

@@ -33,7 +33,7 @@ if (isset($_GET['id'])) { // check id input
             echo 'only allow jpg jpeg png<br>';
         }
     } else {
-        echo 'You do not upload photo.<br>';
+        die('You do not upload photo.<br>');
     }
 
     // new img path

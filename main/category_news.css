@@ -33,6 +33,13 @@ body {
         border: none;
     }
 
+    & input[type=submit] {
+        font-size: 1.25rem;
+        padding: .25rem;
+        background-color: #ddd;
+        border: none;
+    }
+
 }
 
 /* content */

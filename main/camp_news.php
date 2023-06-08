@@ -15,7 +15,7 @@
 <body>
     <?php require('header.php'); ?>
     <div class="header-text">
-        <h1>ข่าวตอนเช้า</h1>
+        <h1>ข่าวค่าย</h1>
     </div>
     <div class="date-filter">
         <form action="" method="post">
@@ -32,13 +32,13 @@
         // check if user use date filter
         if (empty($_POST['date'])) {
             $query = "  SELECT * FROM news 
-                        WHERE category='morning' 
+                        WHERE category='camp' 
                         ORDER BY UploadDate DESC";
             $result = mysqli_query($conn, $query);
         } else {
             $UploadDate = $_POST['date'];
             $query =  " SELECT * FROM news 
-                        WHERE category='morning' 
+                        WHERE category='camp' 
                         AND UploadDate='$UploadDate'
                         ORDER BY UploadDate DESC";
             $result = mysqli_query($conn, $query);

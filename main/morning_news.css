@@ -43,8 +43,6 @@ body {
     margin: 1rem;
     gap: 1rem;
 
-
-
     >.box {
         display: flex;
         height: 250px;

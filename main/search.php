@@ -20,7 +20,7 @@
                     $output .= "<p>No Data</p>";
                 } else {
                     while ($dbarr = mysqli_fetch_array($result)) {
-                        $output .= "<li><a>" . $dbarr['topic'] . "</a>&nbsp-----&nbsp" . $dbarr['date'] . "</li>";
+                        $output .= "<li><a>" . $dbarr['topic'] . "</a>&nbsp-----&nbsp" . $dbarr['UploadDate'] . "</li>";
                     }
                 }
             }

@@ -47,7 +47,7 @@ if (isset($_GET['id'])) { // check id input
                 content='$content' ,
                 category='$category' ,
                 level='$level' ,
-                date=NOW() ,
+                UploadDate=NOW() ,
                 img='$fileImg'
                 WHERE id='$id' ";
 

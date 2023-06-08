@@ -18,21 +18,38 @@
         <h1>ข่าวตอนเช้า</h1>
     </div>
     <div class="date-filter">
+        <form action="" method="post">
             <input type="date" name="date">
-        </div>
+            <input type="submit" value="ยืนยัน">
+        </form> 
+    </div>
     <div class="flex-container">
         <?php
+        // conect database
         include 'server.php';
         mysqli_query($conn, 'Use tup_news;');
 
-        $query = mysqli_query($conn, "SELECT * FROM news WHERE category='morning' ORDER BY date DESC;");
+        // check if user use date filter
+        if (!isset($_POST['date'])) {
+            $query = "  SELECT * FROM news 
+                        WHERE category='morning' 
+                        ORDER BY UploadDate DESC";
+            $result = mysqli_query($conn, $query);
+        } else {
+            $UploadDate = $_POST['date'];
+            $query =  " SELECT * FROM news 
+                        WHERE category='morning' 
+                        AND UploadDate='$UploadDate'
+                        ORDER BY UploadDate DESC";
+            $result = mysqli_query($conn, $query);
+        }
 
         // get data
-        while ($dbarr = mysqli_fetch_array($query)) {
+        while ($dbarr = mysqli_fetch_array($result)) {
             $topic = $dbarr['topic'];
             $descr = $dbarr['descr'];
             $category = $dbarr['category'];
-            $date = $dbarr['date'];
+            $UploadDate = $dbarr['UploadDate'];
             $img = $dbarr['img'];
         ?>
         
@@ -57,7 +74,7 @@
                         <p><?php echo $category ?></p>
                     </div>
                     <div class="date">
-                        <p><?php echo $date ?></p>
+                        <p><?php echo $UploadDate ?></p>
                     </div>
                 </div>
             </div>

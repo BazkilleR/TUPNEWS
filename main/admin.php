@@ -28,7 +28,7 @@
                 <th>TOPIC</th>
                 <th style="width: 15%;">CATEGORY</th>
                 <th style="width: 10%;">LEVEL</th>
-                <th style="width: 25%;">DATE</th>
+                <th style="width: 25%;">UPLOADDATE</th>
             </tr>
             <?php
                 require 'server.php';
@@ -38,14 +38,14 @@
                     $id = $dbarr['id'];
                     $topic = $dbarr['topic'];
                     $level = $dbarr['level'];
-                    $date = $dbarr['date'];
+                    $UploadDate = $dbarr['UploadDate'];
                     $category = $dbarr['category']; ?>
                     <tr>
                         <td><?php echo $id; ?></td>
                         <td><a href="#"><?php echo $topic; ?></a></td>
                         <td><?php echo $category; ?></td>
                         <td><?php echo $level; ?></td>
-                        <td><?php echo $date; ?></td>
+                        <td><?php echo $UploadDate; ?></td>
                     </tr> <?php
                 } 
             ?>

@@ -20,13 +20,13 @@
             include('server.php');
             mysqli_query($conn, 'Use tup_news');
 
-            $query = mysqli_query($conn, "SELECT * FROM news ORDER BY date DESC;");
+            $query = mysqli_query($conn, "SELECT * FROM news ORDER BY UploadDate DESC;");
             // loop get data
             while ($dbarr = mysqli_fetch_array($query)) {
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
                 $content = $dbarr['content'];
-                $date = $dbarr['date'];
+                $UploadDate = $dbarr['UploadDate'];
                 $img = $dbarr['img'];
                 $category = $dbarr['category'];
             ?>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="category-date">
                         <p class="category"><?php echo $category ?></>
-                        <p class="date"><?php echo $date ?></p>
+                        <p class="date"><?php echo $UploadDate ?></p>
                     </div>
                 </div>
             <?php

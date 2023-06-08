@@ -17,7 +17,7 @@ if ($result) {
         $content = $dbarr['content'];
         $category = $dbarr['category'];
         $level = $dbarr['level'];
-        $date = $dbarr['date'];
+        $UploadDate = $dbarr['UploadDate'];
     }
 } else {
     echo 'can not select data';
@@ -41,7 +41,7 @@ if ($result) {
         <p class="content">content : <?php echo $content;?></p>
         <p class="category">category : <?php echo $category;?></p>
         <p class="level">level : <?php echo $level;?></p>
-        <p class="date">date : <?php echo $date;?></p>
+        <p class="date">UploadDate : <?php echo $UploadDate;?></p>
     </section>
 </body>
 </html>

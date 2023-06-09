@@ -39,7 +39,7 @@
             $UploadDate = $_POST['date'];
             $query =  " SELECT * FROM news 
                         WHERE category='morning' 
-                        AND UploadDate='$UploadDate'
+                        AND DATE(UploadDate)='$UploadDate'
                         ORDER BY UploadDate DESC";
             $result = mysqli_query($conn, $query);
         }

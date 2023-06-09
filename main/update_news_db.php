@@ -1,68 +1,66 @@
 <?php
-// connect database
-require('server.php');
+require('server.php'); // Connect to the database
 
-if (isset($_GET['id'])) { // check id input
-
-    // get input
+// Check if id is provided
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
+
+    // Get input values
     $topic = $_POST['topic'];
     $descr = $_POST['descr'];
     $content = $_POST['content'];
     $category = $_POST['category'];
     $level = $_POST['level'];
 
-    // get img info
-    $fileName = basename($_FILES['img']['name']);
-    $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+    // Check if image file is uploaded
+    if (!empty($_FILES['img']['name'])) {
+        $fileType = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
 
-    if (!empty($fileName)) { // check img input
-        if ($fileType == 'jpg' || $fileType == 'jpeg' || $fileType == 'png') { // check img extension
-
-            // delete old img file
+        // Validate image file type
+        $allowedTypes = array('jpg', 'jpeg', 'png');
+        if (in_array($fileType, $allowedTypes)) {
+            // Delete old image file
             $query = "SELECT img FROM news WHERE id='$id'";
-            $del_img = mysqli_query($conn, $query);
-            $img_path = mysqli_fetch_array($del_img);
-            $del_img = unlink($img_path['img']);
+            $result = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($result);
+            $oldImage = $row['img'];
+            unlink($oldImage);
 
-            // save image file in img dir
-            $target_dir = "img/";
-            $fileImg = $target_dir . $fileName;
+            // Save new image file
+            $targetDir = "img/";
+            $fileName = uniqid() . '.' . $fileType;
+            $fileImg = $targetDir . $fileName;
             move_uploaded_file($_FILES['img']['tmp_name'], $fileImg);
         } else {
-            echo 'only allow jpg jpeg png<br>';
+            die('Only JPG, JPEG, and PNG image files are allowed.<br>');
         }
     } else {
-        die('You do not upload photo.<br>');
+        die('You did not upload a photo.<br>');
     }
 
-    // new img path
-    $target_dir = "img/";
-    $fileImg = $target_dir . $fileName;
-
-    // update data
-    $query =    "UPDATE news SET 
-                topic='$topic' ,
-                descr='$descr' ,
-                content='$content' ,
-                category='$category' ,
-                level='$level' ,
-                UploadDate=NOW() ,
+    // Update data
+    $query = "UPDATE news SET 
+                topic='$topic',
+                descr='$descr',
+                content='$content',
+                category='$category',
+                level='$level',
+                UploadDate=NOW(),
                 img='$fileImg'
-                WHERE id='$id' ";
+                WHERE id='$id'";
 
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
 
-    // check update status
+    // Check update status
     if ($result) {
-        echo 'Upadate successfully<br>';
+        echo 'Update successful<br>';
         echo "<a href='index.php'>HOME</a><br>";
         echo "<a href='admin.php'>ADMIN</a><br>";
     } else {
-        echo 'Upload fail';
+        echo 'Update failed';
     }
 } else {
-    echo 'Please select id';
+    echo 'Please select an id.';
 }
 ?>

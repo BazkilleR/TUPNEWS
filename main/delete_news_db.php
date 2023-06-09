@@ -1,32 +1,46 @@
 <?php
+if (isset($_POST['id'])) {
     $id = $_POST['id'];
 
     if (!empty($id)) {
-        // connect database
-        require ('server.php');
+        // Connect to the database
+        require('server.php');
 
-        // delete photo file
+        // Get the image path and delete the photo file
         $query = "SELECT img FROM news WHERE id='$id'";
-        $del_img = mysqli_query($conn, $query);
-        $img_path = mysqli_fetch_array($del_img);
-        $del_img = unlink($img_path['img']);
-        
-        // delete all column
-        $query = "DELETE FROM news WHERE id='$id'";
         $result = mysqli_query($conn, $query);
         
-        // system check
-        if ($del_img && $result) {
-            echo 'Delete Successfully.<br>';
-            echo "<a href='index.php'>HOME</a><br>";
-            echo "<a href='admin.php'>ADMIN</a>";
+        if ($result && mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $img_path = $row['img'];
+            $del_img = unlink($img_path);
+            
+            if ($del_img) {
+                // Delete the row
+                $query = "DELETE FROM news WHERE id='$id'";
+                $result = mysqli_query($conn, $query);
+                
+                if ($result) {
+                    // Deletion successful
+                    echo 'Delete Successfully.<br>';
+                    echo "<a href='index.php'>HOME</a><br>";
+                    echo "<a href='admin.php'>ADMIN</a>";
+                } else {
+                    echo 'Deletion failed.';
+                }
+            } else {
+                echo 'Failed to delete the image file.';
+            }
         } else {
-            echo 'fail';
+            echo 'News item not found.';
         }
+
         mysqli_close($conn);
     } else {
-        echo 'Please select ID';
+        echo 'Please select an ID.';
         echo "<a href='delete_news.php'>BACK</a>";
     }
-    
+} else {
+    echo 'Invalid request.';
+}
 ?>

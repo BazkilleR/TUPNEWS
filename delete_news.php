@@ -1,6 +1,6 @@
-<?php require('../subpage/head.inc.php'); ?>
+<?php require('subpage/head.inc.php');?>
 <body>
-    <?php require ('/nav.inc.php'); ?>
+    <?php require('subpage/nav2.inc.php');?>
     <center>
         <h1>DELETE</h1>
         <form action="delete_news_db.php" method="post">

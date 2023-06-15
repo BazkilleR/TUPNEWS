@@ -1,0 +1,18 @@
+@media (min-width: 576px){
+    .dropdown:hover > .dropdown-menu{
+        display: block;
+        margin-top: 0;
+    }
+
+}
+.nav-link {
+    color: whitesmoke !important;
+}
+.searchi {
+    transform: translateY(+7px);
+}
+
+.navf {
+    font-size: 1.5rem;
+    font-family: 'Prompt', sans-serif;
+}

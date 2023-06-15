@@ -1,0 +1,38 @@
+* {
+  
+}
+.footer-tup .foot {
+  transform: translateY(15px);
+}
+  .footer-tup .footer-site-logo img{
+    width:100px;
+  }
+  .footer-tup {
+    font-family: 'prompt', sans-serif;
+    background: #182A54;
+    color: #fff;
+    height: 200px;
+}
+.foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Added */
+}
+.foot .ftext {
+  display: flex;
+  flex-flow: column wrap; 
+  margin-left: 10px; /* Adjust the margin as per your preference */
+}
+.fimg {
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+.ftext {
+  font-size: 1.5rem;
+  font-family: 'Prompt', sans-serif;
+}
+.fimg {
+  width: 100%;
+  height: 100px;
+}

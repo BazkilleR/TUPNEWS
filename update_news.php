@@ -14,7 +14,7 @@ if (isset($_POST['id'])) {
     $dbarr = mysqli_fetch_array($result);
 
     $output .= "
-    <form action='update_news_db.php?id=" . $id . "' method='post' enctype='multipart/form-data'>
+    <form action='update_news_db.php?id=".$id."' method='post' enctype='multipart/form-data'>
         <p>หัวข้อ</p>
         <input type='text' name='topic' value='" . $dbarr['topic'] . "'><br>
         <p>คำอธิบาย</p>
@@ -39,10 +39,10 @@ if (isset($_POST['id'])) {
     </form>";
 }
 ?>
-<?php include('../subpage/head.inc.php'); ?>
 
+<?php require('subpage/head.inc.php');?>
 <body>
-    <?php include 'header.php' ?>
+    <?php require('subpage/nav2.inc.php');?>
     <h1>UPDATE</h1>
     <!-- select id -->
     <form action="" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"" method="post">

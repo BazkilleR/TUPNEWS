@@ -11,53 +11,54 @@
                     </h1>
                 </div>
             </div>
+            <?php
+            // conect database
+            include 'server.php';
+            mysqli_query($conn, 'Use tup_news;');
+
+            // check if user use date filter
+            if (empty($_POST['date'])) {
+                $query = "  SELECT * FROM news 
+                            WHERE category='tcas67' 
+                            ORDER BY UploadDate DESC";
+                $result = mysqli_query($conn, $query);
+            } else {
+                $UploadDate = $_POST['date'];
+                $query =  " SELECT * FROM news 
+                            WHERE category='tcas67' 
+                            AND UploadDate='$UploadDate'
+                            ORDER BY UploadDate DESC";
+                $result = mysqli_query($conn, $query);
+            }
+
+            // get data
+            while ($dbarr = mysqli_fetch_array($result)) {
+                $topic = $dbarr['topic'];
+                $descr = $dbarr['descr'];
+                $UploadDate = $dbarr['UploadDate'];
+                $img = $dbarr['img'];
+            ?>
             <div class="newscard">
                 <!-- CARD -->
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="img/cus.jpg" class="img-fluid rounded-start" alt="...">
+                            <img src="<?= $img ?>" class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">SFSszdf</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                <h5 class="card-title"><?= $topic ?></h5>
+                                <p class="card-text"><?= $descr ?></p>
+                                <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- CARD -->
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/cus.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">SFSszdf</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/cus.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">SFSszdf</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <?php
+            } 
+            mysqli_close($conn);
+            ?>
             </div>
-           
         </div>
     </section>
     <?php require('subpage/pagination.inc.php');?>

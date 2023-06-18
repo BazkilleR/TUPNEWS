@@ -1,0 +1,40 @@
+.accordion-item {
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #F34EB8 !important;
+    color: white !important;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid !important;
+    font-size: 1rem;
+}
+.accordion-body {
+    padding: 30px; /* Increase the padding value to make the content area bigger */
+}
+.accordion-button:hover, .accordion-button:active {
+    color: whitesmoke !important;
+    font-weight: bold;
+}
+.accordion-button:not(.collapsed)::after,
+.accordion-button::after {
+  background-image: unset !important;
+}
+.atext {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.mctext {
+    font-size: 7rem;
+    font-style: bold;
+}
+.sctext {
+    font-size: 2rem;
+}
+.actext {
+    font-size: 10px;
+}

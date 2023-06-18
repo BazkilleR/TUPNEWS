@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
             unlink($oldImage);
 
             // Save new image file
-            $targetDir = "img/";
+            $targetDir = "news_img/";
             $fileName = uniqid() . '.' . $fileType;
             $fileImg = $targetDir . $fileName;
             move_uploaded_file($_FILES['img']['tmp_name'], $fileImg);

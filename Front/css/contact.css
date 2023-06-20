@@ -1,3 +1,9 @@
+* {
+
+}
+#accordionFlushExample {
+    width: auto;
+}
 .accordion-item {
     margin-bottom: 2rem;
     border-radius: 5px;
@@ -5,11 +11,10 @@
 }
 
 .accordion-button {
-    background-color: #F34EB8 !important;
-    color: white !important;
+    background-color: 	#182A54!important;
+    color: whitesmoke !important;
     padding: 30px;
     border-radius: 5px;
-    border: 1px solid !important;
     font-size: 1rem;
 }
 .accordion-body {
@@ -29,7 +34,7 @@
     justify-content: space-between;
 }
 .mctext {
-    font-size: 7rem;
+    font-size: 6rem;
     font-style: bold;
 }
 .sctext {
@@ -37,4 +42,10 @@
 }
 .actext {
     font-size: 10px;
+}
+.accordion-item > .accordion-header > .btext {
+    font-size: 1.5rem;
+}
+.abtext {
+    font-size: 1rem;
 }

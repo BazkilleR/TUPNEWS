@@ -10,79 +10,80 @@
             <?php
             // connect db
             require 'server.php';
-            mysqli_query($conn, 'Use tup_news;');
 
             // select data
             $query = "SELECT * from news ORDER BY UploadDate DESC";
             $result = mysqli_query($conn, $query);
 
-            $count = 0;
-            while ($dbarr = mysqli_fetch_array($result)) {
-              $topic = $dbarr['topic'];
-              $descr = $dbarr['descr'];
-              $UploadDate = $dbarr['UploadDate'];
-              $category = $dbarr['category'];
-              $img = $dbarr['img'];
+            if ($result) {
+              $count = 0;
+              while ($dbarr = mysqli_fetch_array($result)) {
+                $topic = $dbarr['topic'];
+                $descr = $dbarr['descr'];
+                $UploadDate = $dbarr['UploadDate'];
+                $category = $dbarr['category'];
+                $img = $dbarr['img'];
 
-              if ($count == 0) { ?>
-                <!-- main news -->
-                <div class="col-12 mb-4">
-                  <article class="card article-card">
-                    <a href="article.html">
-                      <div class="card-image">
-                        <div class="post-info">
-                          <span class="text-uppercase"><?=$UploadDate?></span>
+                if ($count == 0) { ?>
+                  <!-- main news -->
+                  <div class="col-12 mb-4">
+                    <article class="card article-card">
+                      <a href="article.html">
+                        <div class="card-image">
+                          <div class="post-info">
+                            <span class="text-uppercase"><?= $UploadDate ?></span>
+                          </div>
+                          <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                         </div>
-                        <img loading="lazy" decoding="async" src="<?=$img?>" alt="Post Thumbnail" class="w-100">
-                      </div>
-                    </a>
-                    <div class="card-body px-0 pb-1">
-                      <ul class="post-meta mb-2">
-                        <li>
-                          <a href="#!"><?=$category?></a>
-                        </li>
-                      </ul>
-                      <h2 class="h1"><?=$topic?></h2>
-                      <p class="card-text"><?=$descr?></p>
-                      <div class="content">
-                        <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              <?php
-              } else { ?>
-                <!-- news -->
-                <div class="col-md-6 mb-4">
-                  <article class="card article-card article-card-sm h-100">
-                    <a href="article.html">
-                      <div class="card-image">
-                        <div class="post-info">
-                          <span class="text-uppercase"><?=$UploadDate?></span>
+                      </a>
+                      <div class="card-body px-0 pb-1">
+                        <ul class="post-meta mb-2">
+                          <li>
+                            <a href="#!"><?= $category ?></a>
+                          </li>
+                        </ul>
+                        <h2 class="h1"><?= $topic ?></h2>
+                        <p class="card-text"><?= $descr ?></p>
+                        <div class="content">
+                          <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
                         </div>
-                        <img loading="lazy" decoding="async" src="<?=$img?>" alt="Post Thumbnail" class="w-100">
                       </div>
-                    </a>
-                    <div class="card-body px-0 pb-0">
-                      <ul class="post-meta mb-2">
-                        <li>
-                          <a href="#!"><?=$category?></a>
-                        </li>
-                      </ul>
-                      <h2>
-                        <a class="post-title" href="article.html"><?=$topic?></a>
-                      </h2>
-                      <p class="card-text"><?=$descr?></p>
-                      <div class="content">
-                        <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
+                    </article>
+                  </div>
+                <?php
+                } else { ?>
+                  <!-- news -->
+                  <div class="col-md-6 mb-4">
+                    <article class="card article-card article-card-sm h-100">
+                      <a href="article.html">
+                        <div class="card-image">
+                          <div class="post-info">
+                            <span class="text-uppercase"><?= $UploadDate ?></span>
+                          </div>
+                          <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
+                        </div>
+                      </a>
+                      <div class="card-body px-0 pb-0">
+                        <ul class="post-meta mb-2">
+                          <li>
+                            <a href="#!"><?= $category ?></a>
+                          </li>
+                        </ul>
+                        <h2>
+                          <a class="post-title" href="article.html"><?= $topic ?></a>
+                        </h2>
+                        <p class="card-text"><?= $descr ?></p>
+                        <div class="content">
+                          <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                </div>
+                    </article>
+                  </div>
             <?php
-              }
-              ++$count;
-            } // end loop
+                }
+                ++$count;
+              } // end loop
+            }
             ?>
             <!-- nav -->
             <div class="col-12">
@@ -147,47 +148,49 @@
                       $query = "SELECT * from news WHERE level='1' ORDER BY UploadDate DESC";
                       $result = mysqli_query($conn, $query);
 
-                      $count = 0;
-                      while ($dbarr = mysqli_fetch_array($result)) {
-                        $topic = $dbarr['topic'];
-                        $descr = $dbarr['descr'];
-                        $UploadDate = $dbarr['UploadDate'];
-                        $category = $dbarr['category'];
-                        $img = $dbarr['img'];
+                      if ($result) {
+                        $count = 0;
+                        while ($dbarr = mysqli_fetch_array($result)) {
+                          $topic = $dbarr['topic'];
+                          $descr = $dbarr['descr'];
+                          $UploadDate = $dbarr['UploadDate'];
+                          $category = $dbarr['category'];
+                          $img = $dbarr['img'];
 
-                        if ($count == 0) { ?>
-                          <!-- big news -->
-                          <article class="card mb-4">
-                            <div class="card-image">
-                              <div class="post-info">
-                                <span class="text-uppercase"><?=$UploadDate?></span>
+                          if ($count == 0) { ?>
+                            <!-- big news -->
+                            <article class="card mb-4">
+                              <div class="card-image">
+                                <div class="post-info">
+                                  <span class="text-uppercase"><?= $UploadDate ?></span>
+                                </div>
+                                <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                               </div>
-                              <img loading="lazy" decoding="async" src="<?=$img?>" alt="Post Thumbnail" class="w-100">
-                            </div>
-                            <div class="card-body px-0 pb-1">
-                              <h3>
-                                <a class="post-title post-title-sm" href="article.html"><?=$topic?></a>
-                              </h3>
-                              <p class="card-text"><?=$descr?></p>
-                              <div class="content">
-                                <a class="read-more-btn" href="article.html">Read Full Article</a>
+                              <div class="card-body px-0 pb-1">
+                                <h3>
+                                  <a class="post-title post-title-sm" href="article.html"><?= $topic ?></a>
+                                </h3>
+                                <p class="card-text"><?= $descr ?></p>
+                                <div class="content">
+                                  <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                </div>
                               </div>
-                            </div>
-                          </article>
-                        <?php
-                        } else { ?>
-                          <!-- news -->
-                          <a class="media align-items-center" href="article.html">
-                            <img loading="lazy" decoding="async" src="<?=$img?>" alt="Post Thumbnail" class="w-100">
-                            <div class="media-body ml-3">
-                              <h3 style="margin-top:-5px"><?=$topic?></h3>
-                              <p class="mb-0 small"><?=$descr?></p>
-                            </div>
-                          </a>
+                            </article>
+                          <?php
+                          } else { ?>
+                            <!-- news -->
+                            <a class="media align-items-center" href="article.html">
+                              <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
+                              <div class="media-body ml-3">
+                                <h3 style="margin-top:-5px"><?= $topic ?></h3>
+                                <p class="mb-0 small"><?= $descr ?></p>
+                              </div>
+                            </a>
                       <?php
-                        }
-                        ++$count;
-                      } // end loop
+                          }
+                          ++$count;
+                        } // end loop
+                      }
                       mysqli_close($conn);
                       ?>
                     </div>

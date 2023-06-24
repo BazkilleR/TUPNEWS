@@ -12,12 +12,12 @@
             require 'server.php';
 
             // select data
-            $query = "SELECT * from news ORDER BY UploadDate DESC";
-            $result = mysqli_query($conn, $query);
+            $sql = "SELECT * from news ORDER BY UploadDate DESC";
+            $result = $mysqli->query($sql);
 
             if ($result) {
               $count = 0;
-              while ($dbarr = mysqli_fetch_array($result)) {
+              while ($dbarr = $result->fetch_assoc()) {
                 $topic = $dbarr['topic'];
                 $descr = $dbarr['descr'];
                 $UploadDate = $dbarr['UploadDate'];
@@ -145,12 +145,12 @@
                     <div class="widget-list">
                       <?php
                       // select data
-                      $query = "SELECT * from news WHERE level='1' ORDER BY UploadDate DESC";
-                      $result = mysqli_query($conn, $query);
+                      $sql = "SELECT * from news ORDER BY UploadDate DESC";
+                      $result = $mysqli->query($sql);
 
                       if ($result) {
                         $count = 0;
-                        while ($dbarr = mysqli_fetch_array($result)) {
+                        while ($dbarr = $result->fetch_assoc()) {
                           $topic = $dbarr['topic'];
                           $descr = $dbarr['descr'];
                           $UploadDate = $dbarr['UploadDate'];
@@ -191,7 +191,7 @@
                           ++$count;
                         } // end loop
                       }
-                      mysqli_close($conn);
+                      $mysqli->close();
                       ?>
                     </div>
                   </div>

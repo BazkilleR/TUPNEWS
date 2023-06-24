@@ -18,22 +18,22 @@
                 
                 // check if user use date filter
                 if (empty($_POST['date'])) {
-                    $query = "  SELECT * FROM news 
+                    $sql = "  SELECT * FROM news 
                             WHERE category='tcas67' 
                             ORDER BY UploadDate DESC";
-                    $result = mysqli_query($conn, $query);
+                    $result = $mysqli->query($sql);
                 } else {
                     $UploadDate = $_POST['date'];
-                    $query =  " SELECT * FROM news 
+                    $sql =  " SELECT * FROM news 
                             WHERE category='tcas67' 
                             AND UploadDate='$UploadDate'
                             ORDER BY UploadDate DESC";
-                    $result = mysqli_query($conn, $query);
+                    $result = $mysqli->query($sql);
                 }
 
                 // get data
                 if ($result) {
-                    while ($dbarr = mysqli_fetch_array($result)) {
+                    while ($dbarr = $result->fetch_assoc()) {
                         $topic = $dbarr['topic'];
                         $descr = $dbarr['descr'];
                         $UploadDate = $dbarr['UploadDate'];
@@ -58,7 +58,7 @@
                     <?php
                     }
                 }
-                mysqli_close($conn);
+                $mysqli->close();
                     ?>
                         </div>
             </div>

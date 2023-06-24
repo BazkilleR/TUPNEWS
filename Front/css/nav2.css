@@ -1,10 +1,23 @@
-@media (min-width: 576px){
+@media (min-width: 992px){
     .dropdown:hover > .dropdown-menu{
         display: block;
-        margin-top: 0;
+        background-color: #182A54; 
+        border-radius: 0;
+        position: absolute;
     }
 
 }
+.dropdown > .dropdown-menu > .dropdown-item:hover {
+    background-color: #182A54;
+    color: whitesmoke;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}
+.dropdown:hover > .dropdown-menu > .dropdown-item{
+    color: whitesmoke !important;
+}
+
 .nav-link {
     color: whitesmoke !important;
 }
@@ -15,4 +28,9 @@
 .navf {
     font-size: 1.5rem;
     font-family: 'Prompt', sans-serif;
+}
+.blogo {
+    object-fit: cover;
+    width: 110px;
+    height: 50px;
 }

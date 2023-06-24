@@ -1,6 +1,6 @@
-<nav class="navbar navbar-light navbar-expand-sm sticky-top bg-faded justify-content-center sticky-top" 
-        style="background-color: #182A54;" id="navbar_top">
-        <div class="container-fluid navf">
+<header>
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container-fluid navf">
             <a href="" class="navbar-brand me-auto" style="color: whitesmoke;">
                 <img src="img/TUP41NEWS.png" alt="Logo" class="blogo">
             </a>
@@ -23,7 +23,7 @@
                             ข่าวสาร
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item " href="morning_news.php" style="color: whitesmoke !important;">ข่าวสารหน้าเสาธง</a></li>
+                                <li><a class="dropdown-item" href="morning_news.php" style="color: whitesmoke !important;">ข่าวสารหน้าเสาธง</a></li>
                                 <li><a class="dropdown-item" href="tcas67_news.php" style="color: whitesmoke !important;">TCAS67</a></li>
                                 <li><a class="dropdown-item" href="camp_news.php" style="color: whitesmoke !important;">ค่าย</a></li>
                             </ul>
@@ -77,4 +77,5 @@
                 </div>
             </div>
         </div>
-    </nav>
+</nav>
+</header>

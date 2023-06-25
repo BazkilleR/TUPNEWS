@@ -1,7 +1,6 @@
 <?php
 // connect database
 require 'server.php';
-mysqli_query($conn, "USE tup_news");
 
 $output = '';
 
@@ -9,9 +8,9 @@ $output = '';
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
 
-    $query = "SELECT * FROM news where id='$id'";
-    $result = mysqli_query($conn, $query);
-    $dbarr = mysqli_fetch_array($result);
+    $sql = "SELECT * FROM news where id='$id'";
+    $result = $mysqli->query($sql);
+    $dbarr = $result->fetch_assoc();
 
     $output .= "
     <form action='update_news_db.php?id=".$id."' method='post' enctype='multipart/form-data'>

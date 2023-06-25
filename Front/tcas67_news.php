@@ -14,21 +14,23 @@
                 </div>
                 <?php
                 // conect database
-                include 'server.php';
-                
+                require 'server.php';
+                require 'pagination-v2.class.php';
+                $page = new PaginationV2();
+
                 // check if user use date filter
                 if (empty($_POST['date'])) {
                     $sql = "  SELECT * FROM news 
                             WHERE category='tcas67' 
                             ORDER BY UploadDate DESC";
-                    $result = $mysqli->query($sql);
+                    $result = $page->query($mysqli, $sql, 5);
                 } else {
                     $UploadDate = $_POST['date'];
                     $sql =  " SELECT * FROM news 
                             WHERE category='tcas67' 
                             AND UploadDate='$UploadDate'
                             ORDER BY UploadDate DESC";
-                    $result = $mysqli->query($sql);
+                    $result = $page->query($mysqli, $sql, 5);
                 }
 
                 // get data
@@ -55,17 +57,17 @@
                                     </div>
                                 </div>
                             </div>
-                    <?php
+                        </div>
+        <?php
                     }
                 }
+                require('subpage/pagination.inc.php'); //pagination
                 $mysqli->close();
-                    ?>
-                        </div>
-            </div>
-        </section>
-        <?php require('subpage/pagination.inc.php'); ?>
-        <?php require('subpage/footer.inc.php'); ?>
-    </div>
+            echo '</div>';
+        echo '</section>';
+        require('subpage/footer.inc.php'); //footer
+        ?>
+        </div>
 </body>
 
 </html>

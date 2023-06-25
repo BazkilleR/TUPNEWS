@@ -39,18 +39,18 @@ if (isset($_GET['id'])) {
     }
 
     // Update data
-    $query = "UPDATE news SET 
-                topic='$topic',
-                descr='$descr',
-                content='$content',
-                category='$category',
-                level='$level',
-                UploadDate=NOW(),
-                img='$fileImg'
-                WHERE id='$id'";
+    $sql =  "UPDATE news SET 
+            topic='$topic',
+            descr='$descr',
+            content='$content',
+            category='$category',
+            level='$level',
+            UploadDate=NOW(),
+            img='$fileImg'
+            WHERE id='$id'";
 
-    $result = mysqli_query($conn, $query);
-    mysqli_close($conn);
+    $result = $mysqli->query($sql);
+    $mysqli->close();
 
     // Check update status
     if ($result) {

@@ -1,80 +1,73 @@
 <?php require('subpage/head.inc.php'); ?>
 
 <body>
-    <?php require('subpage/nav2.inc.php'); ?>
-    <div class="header-text">
-        <h1>ข่าวตอนเช้า</h1>
-    </div>
-    <div class="date-filter">
-        <form action="" method="post">
-            <input type="date" name="date">
-            <input type="submit" value="ยืนยัน">
-        </form>
-    </div>
-    <div class="flex-container">
-        <?php
-        // conect database
-        include 'server.php';
-
-        // check if user use date filter
-        if (empty($_POST['date'])) {
-            $sql = "  SELECT * FROM news 
-                        WHERE category='morning' 
-                        ORDER BY UploadDate DESC";
-            $result = $mysqli->query($sql);
-        } else {
-            $UploadDate = $_POST['date'];
-            $sql =  " SELECT * FROM news 
-                        WHERE category='morning' 
-                        AND DATE(UploadDate)='$UploadDate'
-                        ORDER BY UploadDate DESC";
-            $result = $mysqli->query($sql);
-        }
-
-        // get data
-        if ($result) {
-            while ($dbarr = $result->fetch_assoc()) {
-                $topic = $dbarr['topic'];
-                $descr = $dbarr['descr'];
-                $category = $dbarr['category'];
-                $UploadDate = $dbarr['UploadDate'];
-                $img = $dbarr['img'];
-        ?>
-
-                <!-- output -->
-                <div class="box">
-                    <div class="img">
-                        <img src="<?php echo $img ?>">
-                    </div>
-                    <div class="content">
-                        <div class="topic-descr">
-                            <div class="topic">
-                                <a href="#">
-                                    <h4><?php echo $topic ?></h4>
-                                </a>
-                            </div>
-                            <div class="descr">
-                                <p><?php echo $descr ?></p>
-                            </div>
-                        </div>
-                        <div class="category-date">
-                            <div class="category">
-                                <p><?php echo $category ?></p>
-                            </div>
-                            <div class="date">
-                                <p><?php echo $UploadDate ?></p>
-                            </div>
-                        </div>
+    <div id="flex-container">
+        <?php require('subpage/nav2.inc.php'); ?>
+        <section>
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div>
+                        <h1>
+                            ข่าวหน้าเสาธง
+                        </h1>
                     </div>
                 </div>
+                <?php
+                // conect database
+                require 'server.php';
+                require 'pagination-v2.class.php';
+                $page = new PaginationV2();
 
-                <!-- end loop -->
+                // check if user use date filter
+                if (empty($_POST['date'])) {
+                    $sql = "  SELECT * FROM news 
+                            WHERE category='morning' 
+                            ORDER BY UploadDate DESC";
+                    $result = $page->query($mysqli, $sql, 5);
+                } else {
+                    $UploadDate = $_POST['date'];
+                    $sql =  " SELECT * FROM news 
+                            WHERE category='morning' 
+                            AND UploadDate='$UploadDate'
+                            ORDER BY UploadDate DESC";
+                    $result = $page->query($mysqli, $sql, 5);
+                }
+
+                // get data
+                if ($result) {
+                    while ($dbarr = $result->fetch_assoc()) {
+                        $topic = $dbarr['topic'];
+                        $descr = $dbarr['descr'];
+                        $UploadDate = $dbarr['UploadDate'];
+                        $img = $dbarr['img'];
+                ?>
+                        <div class="newscard">
+                            <!-- CARD -->
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="<?= $img ?>" class="img-fluid rounded-start">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $topic ?></h5>
+                                            <p class="card-text"><?= $descr ?></p>
+                                            <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         <?php
-            }
-        }
-        $mysqli->close();
+                    }
+                }
+                require('subpage/pagination.inc.php'); //pagination
+                $mysqli->close();
+            echo '</div>';
+        echo '</section>';
+        require('subpage/footer.inc.php'); //footer
         ?>
-    </div>
+        </div>
 </body>
 
 </html>

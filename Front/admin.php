@@ -23,10 +23,12 @@
             </tr>
             <?php
             require 'server.php';
-            $result = mysqli_query($conn, 'SELECT * FROM news;');
+
+            $sql = 'SELECT * FROM news';
+            $result = $mysqli->query($sql);
 
             if ($result) {
-                while ($dbarr = mysqli_fetch_array($result)) {
+                while ($dbarr = $result->fetch_assoc()) {
                     $id = $dbarr['id'];
                     $topic = $dbarr['topic'];
                     $level = $dbarr['level'];
@@ -42,7 +44,7 @@
             <?php
                 }
             }
-            mysqli_close($conn);
+            $mysqli->close();
             ?>
         </table>
     </section>

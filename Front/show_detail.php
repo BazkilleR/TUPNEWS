@@ -6,10 +6,10 @@ require 'server.php';
 $id = $_GET['id']; 
 
 // select data
-$query = "SELECT * FROM news WHERE id='$id'";
-$result = mysqli_query($conn, $query);
+$sql = "SELECT * FROM news WHERE id='$id'";
+$result = $mysqli->query($sql);
 if ($result) {
-    while ($dbarr = mysqli_fetch_array($result)) {
+    while ($dbarr = $result->fetch_assoc()) {
         $id = $dbarr['id'];
         $img = $dbarr['img'];
         $topic = $dbarr['topic'];
@@ -34,14 +34,14 @@ if ($result) {
 </head>
 <body>
     <section class="detail">
-        <p class="id">id : <?php echo $id;?></p>
-        <p class="img_path">img_path : <?php echo $img;?></p>
-        <p class="topic">topic : <?php echo $topic;?></p>
-        <p class="descr">descr : <?php echo $descr;?></p>
-        <p class="content">content : <?php echo $content;?></p>
-        <p class="category">category : <?php echo $category;?></p>
-        <p class="level">level : <?php echo $level;?></p>
-        <p class="date">UploadDate : <?php echo $UploadDate;?></p>
+        <p class="id">id : <?= $id ?></p>
+        <p class="img_path">img_path : <?= $img ?></p>
+        <p class="topic">topic : <?= $topic ?></p>
+        <p class="descr">descr : <?= $descr ?></p>
+        <p class="content">content : <?= $content ?></p>
+        <p class="category">category : <?= $category ?></p>
+        <p class="level">level : <?= $level ?></p>
+        <p class="date">UploadDate : <?= $UploadDate ?></p>
     </section>
 </body>
 </html>

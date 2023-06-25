@@ -18,6 +18,7 @@
             if ($result) {
               $count = 0;
               while ($dbarr = $result->fetch_assoc()) {
+                $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
                 $descr = $dbarr['descr'];
                 $UploadDate = $dbarr['UploadDate'];
@@ -45,7 +46,7 @@
                         <h2 class="h1"><?= $topic ?></h2>
                         <p class="card-text"><?= $descr ?></p>
                         <div class="content">
-                          <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
+                          <a class="read-more-btn" href="show_detail.php?id=<?php echo $id ?>">Read Full Article</a>
                         </div>
                       </div>
                     </article>
@@ -74,7 +75,7 @@
                         </h2>
                         <p class="card-text"><?= $descr ?></p>
                         <div class="content">
-                          <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
+                          <a class="read-more-btn" href="show_detail.php?id=<?= $id ?>">Read Full Article</a>
                         </div>
                       </div>
                     </article>
@@ -125,6 +126,7 @@
                       if ($result) {
                         $count = 0;
                         while ($dbarr = $result->fetch_assoc()) {
+                          $id = $dbarr['id'];
                           $topic = $dbarr['topic'];
                           $descr = $dbarr['descr'];
                           $UploadDate = $dbarr['UploadDate'];
@@ -146,7 +148,7 @@
                                 </h3>
                                 <p class="card-text"><?= $descr ?></p>
                                 <div class="content">
-                                  <a class="read-more-btn" href="article.html">Read Full Article</a>
+                                  <a class="read-more-btn" href="show_detail.php?id=<?= $id ?>">Read Full Article</a>
                                 </div>
                               </div>
                             </article>

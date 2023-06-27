@@ -1,14 +1,31 @@
-<?php require('subpage/head.inc.php');?>
-<body>
-<div id="flex-container">
-    <?php require('subpage/nav2.inc.php');?>
-    <section>
-        <div class="container-fluid">
-            <div class="camptext mt-5 mb-3">
-                <h1>
-                    TCAS67
-                </h1>
+<div class="container search"> 
+        <!-- <form role="form"> 
+            <div class="form-group">
+                <input type="text" class="form-control input-lg" placeholder="Search.." />
+                <span>
+                    <a href="#">
+                         <i class="form-control-feedback fa fa-user"></i>
+                    </a>
+                </span>    
+                   
             </div>
+        </form> -->
+        <div class="container mt-5">
+            <form name="search" method="post">
+                <div class="input-group border ">
+                    <input type="text" name="input" placeholder="Search.." aria-describedby="button-addon3" 
+                    class="form-control bg-none border-0">
+                    <div class="input-group-append border-0">
+                        <button id="button-addon3" type="submit" class="btn btn-link btns">
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <section>
+        <div class="container-fluid mt-5">
             <?php
             // conect database
             include 'server.php';
@@ -59,9 +76,5 @@
             </div>
         </div>
     </section>
-    <?php require('subpage/pagination.inc.php');?>
-    <?php require('subpage/footer.inc.php');?>
+    </div>
 </div>
-</body>
-
-</html>

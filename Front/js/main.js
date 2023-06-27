@@ -13,3 +13,32 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 }); 
 // DOMContentLoaded  end
+// Function to handle the toggle behavior of the dropdown
+function toggleDropdown() {
+  if ($(window).width() < 992) {
+    // For mobile devices
+    $('.dropdown > a').on('click', function(e) {
+      e.preventDefault();
+      $(this).siblings('.dropdown-menu').toggle();
+    });
+  } else {
+    // For desktop
+    $('.dropdown').hover(
+      function() {
+        $(this).children('.dropdown-menu').css('display', 'block');
+      },
+      function() {
+        $(this).children('.dropdown-menu').css('display', 'none');
+      }
+    );
+  }
+}
+
+// Call the function on page load and when the window is resized
+$(document).ready(function() {
+  toggleDropdown();
+});
+
+$(window).resize(function() {
+  toggleDropdown();
+});

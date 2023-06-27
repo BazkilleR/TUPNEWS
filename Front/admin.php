@@ -1,9 +1,6 @@
-<?php require('subpage/head.inc.php'); ?>
-
-<html>
-
+<?php require('subpage/head.inc.php');?>
 <body>
-    <?php require('subpage/nav2.inc.php'); ?>
+    <?php require('subpage/nav2.inc.php');?>
     <h1 class="title">ADMIN PANAL</h1>
     <section class="grid-container">
         <div class="menu">
@@ -22,13 +19,10 @@
                 <th style="width: 25%;">UPLOADDATE</th>
             </tr>
             <?php
-            require 'server.php';
-
-            $sql = 'SELECT * FROM news';
-            $result = $mysqli->query($sql);
-
-            if ($result) {
-                while ($dbarr = $result->fetch_assoc()) {
+                require 'server.php';
+                mysqli_query($conn, 'USE tup_news;');
+                $query = mysqli_query($conn, 'SELECT * FROM news;');
+                while ($dbarr = mysqli_fetch_array($query)) {
                     $id = $dbarr['id'];
                     $topic = $dbarr['topic'];
                     $level = $dbarr['level'];
@@ -40,14 +34,12 @@
                         <td><?php echo $category; ?></td>
                         <td><?php echo $level; ?></td>
                         <td><?php echo $UploadDate; ?></td>
-                    </tr>
-            <?php
-                }
-            }
-            $mysqli->close();
+                    </tr> <?php
+                } 
             ?>
         </table>
     </section>
+
 </body>
 
 </html>

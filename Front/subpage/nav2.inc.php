@@ -23,9 +23,9 @@
                             ข่าวสาร
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item " href="morning_news.php" style="color: whitesmoke !important;">ข่าวสารหน้าเสาธง</a></li>
-                                <li><a class="dropdown-item" href="tcas67_news.php" style="color: whitesmoke !important;">TCAS67</a></li>
-                                <li><a class="dropdown-item" href="camp_news.php" style="color: whitesmoke !important;">ค่าย</a></li>
+                                <li><a class="dropdown-item " href="morning_news.php">ข่าวสารหน้าเสาธง</a></li>
+                                <li><a class="dropdown-item" href="tcas67_news.php">TCAS67</a></li>
+                                <li><a class="dropdown-item" href="camp_news.php">ค่าย</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown arrow-hidden">
@@ -34,28 +34,28 @@
                             </a>
                             <ul class="dropdown-menu" onclick="void(0)">
                                 <li>
-                                    <a class="dropdown-item" href="https://drive.google.com/drive/folders/1R21yCvwrFN0XyPd7kMZtuXp2HpDdu956?usp=drive_link" 
-                                style="color: whitesmoke !important;">ใบลาเรียน</a>
+                                    <a class="dropdown-item hover-shadow" href="https://drive.google.com/drive/folders/1R21yCvwrFN0XyPd7kMZtuXp2HpDdu956?usp=drive_link" 
+                                    >ใบลาเรียน</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="https://anyflip.com/gmahn/zzze/" 
-                                style="color: whitesmoke !important;">คู่มือนักเรียน</a>
+                                    >คู่มือนักเรียน</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="https://drive.google.com/file/d/1IMIbOgt5G2YflVHY6I5JZZm74AFU5e2o/view?usp=sharing" 
-                                    style="color: whitesmoke !important;">ตารางเรียน</a>
+                                    <a class="dropdown-item" href="https://drive.google.com/file/d/1kqNrbf8K8eV9lP3C4yOq546i6JwIRMHm/view?usp=drive_link" 
+                                    >ตารางเรียน</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="http://www.tup.ac.th/images/news-academic/_ม.6_เทอม_1_ปีการศึกษา_2566_.pdf" 
-                                style="color: whitesmoke !important;">ภาระงาน ม.6</a>
+                                    >ภาระงาน ม.6</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="http://www.tup.ac.th/downloads/calendar-2566.pdf" 
-                                style="color: whitesmoke !important;">ปฎิทินประจำปีการศึกษา 2566</a>
+                                    >ปฎิทินประจำปีการศึกษา 2566</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="camp_news.php" 
-                                style="color: whitesmoke !important;">ใบ ปพ.7</a>
+                                    >ใบ ปพ.7</a>
                                 </li>
                             </ul>
                         </li>
@@ -64,14 +64,14 @@
                                 ติดต่อ
                             </a>
                             <ul class="dropdown-menu" onclick="void(0)">
-                                <li><a class="dropdown-item" href="contact.php" style="color: whitesmoke !important;">คุณครูเตรียม</a></li>
+                                <li><a class="dropdown-item" href="contact.php" >คุณครูเตรียม</a></li>
                             </ul>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">แจ้งปัญหา</a>
+                            <a class="nav-link" href="search.php">แจ้งปัญหา</a>
                         </li>
                         <li class="nav-item active searchi">
-                            <a href="search.php"><i class="fa fa-search" style="color: whitesmoke;"></i></a>
+                            <a class="nav-link" href="search.php"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
                         </li>
                     </ul>
                 </div>

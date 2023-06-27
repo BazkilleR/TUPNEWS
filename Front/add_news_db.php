@@ -36,7 +36,7 @@ if ($isValidInput) {
             if (move_uploaded_file($fileTemp, $fileImg)) {
                 // Insert data into the database using prepared statements
                 $query = "INSERT INTO news (topic, descr, content, category, level, UploadDate, img) VALUES (?, ?, ?, ?, ?, NOW(), ?)";
-                $stmt = mysqli_prepare($mysqli, $query);
+                $stmt = mysqli_prepare($conn, $query);
                 mysqli_stmt_bind_param($stmt, 'ssssss', $topic, $descr, $content, $category, $level, $fileImg);
                 $result = mysqli_stmt_execute($stmt);
 
@@ -59,5 +59,5 @@ if ($isValidInput) {
 }
 
 // Disconnect from the database
-$mysqli->close();
+mysqli_close($conn);
 ?>

@@ -1,7 +1,7 @@
 <?php require('subpage/head.inc.php');?>
 <body>
-    <?php require('subpage/nav2.inc.php');?>
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+  <?php require('subpage/nav2.inc.php');?>
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="img/cus77.jpg" class="d-block w-100" alt="first">

@@ -1,26 +1,6 @@
-.footer-tup .footer-site-logo img{
-    width:100px;
-  }
-.footer-tup {
-    font-family: 'prompt', sans-serif;
-    background: #182A54;
-    color: #fff;
-    height: 200px;
-    width: 100%;
-}
 .foot {
   display: flex;
   flex-direction: row;
-}
-.foot .ftext {
-  flex-flow: column wrap; 
-  font-size: 1.5rem;
-  font-family: 'Prompt', sans-serif;
-}
-.fimg {
-  padding: 0;
-  width: 100%;
-  height: 100px;
 }
 #flex-container {
   display: flex;
@@ -30,4 +10,26 @@
 }
 #flex-container > .footer-tup {
   margin-top: auto;
+}
+.footer {
+  background-color: #182A54;
+  color: whitesmoke;
+  padding: 20px 0;
+}
+.footer p {
+  margin-bottom: 0;
+  padding: 0px 0px 0px 0px;
+  
+}
+.foote {
+  margin-top: 8px;
+}
+.footer img {
+  object-fit: cover;
+  max-width: 100px;
+}
+.fimg {
+  object-fit: fill;
+  width: auto;
+  height: auto;
 }

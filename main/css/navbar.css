@@ -1,0 +1,7 @@
+/* Add custom CSS for mobile devices */
+@media (min-width: 767.98px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
+  

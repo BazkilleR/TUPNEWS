@@ -29,7 +29,7 @@ if ($isValidInput) {
         $allowedTypes = ['jpg', 'jpeg', 'png'];
         if (in_array($fileType, $allowedTypes)) {
             // Save the image file
-            $targetDir = 'img/';
+            $targetDir = 'news_img/';
             $fileImg = $targetDir . $fileName;
             $fileTemp = $_FILES['img']['tmp_name'];
             

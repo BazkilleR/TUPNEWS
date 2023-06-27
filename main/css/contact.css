@@ -1,0 +1,44 @@
+#accordionFlushExample {
+    width: auto;
+}
+.accordion-item {
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: 	#182A54!important;
+    color: whitesmoke !important;
+    padding: 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.accordion-body {
+    padding: 30px; /* Increase the padding value to make the content area bigger */
+}
+.accordion-button:not(.collapsed)::after,
+.accordion-button::after {
+  background-image: unset !important;
+}
+.atext {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.mctext {
+    font-size: 6rem;
+    font-style: bold;
+}
+.sctext {
+    font-size: 2rem;
+}
+.actext {
+    font-size: 10px;
+}
+.accordion-item > .accordion-header > .btext {
+    font-size: 1.5rem;
+}
+.abtext {
+    font-size: 1rem;
+}

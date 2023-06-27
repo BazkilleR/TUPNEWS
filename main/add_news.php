@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Add news</title>
-    <style>
-        input {
+
+<?php require('subpage/head.inc.php');?>
+<style>
+    input {
             margin-bottom: 1rem;
         }
-    </style>
-</head>
+</style>
+<title>addnews</title>
 <body>
-    <?php require('header.php'); ?>
+    <?php require('subpage/nav2.inc.php');?>
     <form action="add_news_db.php" method="post" enctype="multipart/form-data">
         <!-- topic -->
         <p>หัวข้อ</p>

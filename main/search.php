@@ -27,27 +27,12 @@
         }
     ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Search</title>
-</head>
-
+<?php require('subpage/head.inc.php');?>
 <body>
-    <?php require('header.php'); ?>
-    <form name="search" method="post">
-        <input type="text" placeholder="Search.." name="input">
-        <button type="submit"><a href="#"><i class="fa fa-search"></i></a></button>
-    </form>
-    <ol>
-        <?php echo $output; ?>
-    </ol>
+    <?php require('subpage/nav2.inc.php');?>
+    <?php require('subpage/search.inc.php');?>
+    <?php require('subpage/pagination.inc.php');?>
+    <?php require('subpage/footer.inc.php');?>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <section>
     <div class="mt-auto">
-        <img class="fimg" src="img/ลายโบว์ ม.ปลาย.png">
+        <img class="fimg" src="img/linebow.png">
         <footer class="footer-tup">
 	        <div class="container-fluid">
 		        <div class="me-auto foot">

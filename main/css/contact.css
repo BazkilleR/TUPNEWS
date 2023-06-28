@@ -1,3 +1,6 @@
+* {
+
+}
 #accordionFlushExample {
     width: auto;
 }
@@ -16,6 +19,10 @@
 }
 .accordion-body {
     padding: 30px; /* Increase the padding value to make the content area bigger */
+}
+.accordion-button:hover, .accordion-button:active {
+    color: whitesmoke !important;
+    font-weight: bold;
 }
 .accordion-button:not(.collapsed)::after,
 .accordion-button::after {

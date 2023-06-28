@@ -45,10 +45,10 @@
     }
   }
   
-  /* .card {
+  .card {
     border: 0;
     position: relative;
-  } */
+  }
   .card-meta {
     padding-left: 0;
   }
@@ -462,15 +462,4 @@
 .wbtn {
   background-color: #182A54 !important;
   color: whitesmoke !important;
-}
-.section > .container > .main-news > .line {
-  border-left: thick solid hotpink !important;
-  border-style:  none  none  none solid;
-  padding: 10px;
-  
-}
-.line2 {
-  border-left: thick solid red !important;
-  border-style:  none  none  none solid;
-  padding: 10px;
 }

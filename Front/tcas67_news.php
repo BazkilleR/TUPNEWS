@@ -38,10 +38,10 @@
             ?>
             <div class="newscard">
                 <!-- CARD -->
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
+                <div class="card mb-3 rounded-0" style="max-width: 540px; height: 250px;">
+                    <div class="row ">
                         <div class="col-md-4">
-                            <img src="<?= $img ?>" class="img-fluid rounded-start">
+                            <img src="<?= $img ?>" class="img-fluid rounded-0">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">

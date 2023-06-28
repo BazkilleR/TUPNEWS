@@ -17,7 +17,7 @@
                         <input type="text" class="form-control" placeholder="dd/mm/yy" aria-label="Recipient's username" 
                         aria-describedby="button-addon2" style="border-radius: 0;">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                        style="border-radius: 0;"><a href="search.php" style="text-decoration:none">ค้นหา</a></button>
+                        style="border-radius: 0;"><a href="arti.php" style="text-decoration:none">ค้นหา</a></button>
                     </div>
                 </div>
             </div>

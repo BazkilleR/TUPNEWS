@@ -4,8 +4,8 @@
       <div class="main-news">
         <h1 class="line">ข่าวล่าสุด</h1>
       </div>
-      <div class="row no-gutters-lg">
-        <div class="col-xl-8 mb-5 mb-lg-0">
+      <div class="row no-gutters-lg mt-4">
+        <div class="col-xl-8 mb-5 mb-lg-0" >
           <div class="row">
             <?php
             // connect db
@@ -13,11 +13,12 @@
             mysqli_query($conn, 'Use tup_news;');
 
             // select data
-            $query = "SELECT * from news ORDER BY UploadDate DESC";
+            $query = "SELECT * from news ORDER BY UploadDate DESC LIMIT 5";
             $result = mysqli_query($conn, $query);
 
             $count = 0;
             while ($dbarr = mysqli_fetch_array($result)) {
+              $id = $dbarr['id'];
               $topic = $dbarr['topic'];
               $descr = $dbarr['descr'];
               $UploadDate = $dbarr['UploadDate'];
@@ -30,10 +31,10 @@
                   <article class="card article-card">
                     <a href="article.html">
                       <div class="card-image">
+                        <img loading="lazy" id="cimg" decoding="async" src="<?=$img?>" alt="Post Thumbnail" class="w-100">
                         <div class="post-info">
                           <span class="text-uppercase"><?=$UploadDate?></span>
                         </div>
-                        <img loading="lazy" decoding="async" src="<?=$img?>" alt="Post Thumbnail" class="w-100">
                       </div>
                     </a>
                     <div class="card-body px-0 pb-1">
@@ -42,10 +43,10 @@
                           <a href="#!"><?=$category?></a>
                         </li>
                       </ul>
-                      <h2 class="h1"><?=$topic?></h2>
-                      <p class="card-text"><?=$descr?></p>
+                      <a href="show_detail.php?id=<?php echo $id?>"><h2 class="h1" id="carda"><?=$topic?></h2></a>
+                      <p class="card-text" id="desr"><?=$descr?></p>
                       <div class="content">
-                        <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
+                        <a class="read-more-btn" href="show_detail.php?id=<?php echo $id?>">Read Full Article</a>
                       </div>
                     </div>
                   </article>
@@ -54,7 +55,7 @@
               } else { ?>
                 <!-- news -->
                 <div class="col-md-6 mb-4">
-                  <article class="card article-card article-card-sm h-100">
+                  <article class="card article-card article-card-sm h-100 ">
                     <a href="article.html">
                       <div class="card-image">
                         <div class="post-info">
@@ -74,7 +75,7 @@
                       </h2>
                       <p class="card-text"><?=$descr?></p>
                       <div class="content">
-                        <a class="read-more-btn" href="show_detail.php">Read Full Article</a>
+                        <a class="read-more-btn" href="show_detail.php?id=<?php echo $id?>">Read Full Article</a>
                       </div>
                     </div>
                   </article>
@@ -84,7 +85,7 @@
               ++$count;
             } // end loop
             ?>
-            <!-- nav -->
+            <!-- PAGE NAV -->
             <div class="col-12">
               <div class="row">
                 <div class="col-12">
@@ -144,7 +145,7 @@
                     <div class="widget-list">
                       <?php
                       // select data
-                      $query = "SELECT * from news WHERE level='1' ORDER BY UploadDate DESC";
+                      $query = "SELECT * from news WHERE level='1' ORDER BY UploadDate DESC LIMIT 5";
                       $result = mysqli_query($conn, $query);
 
                       $count = 0;
@@ -168,7 +169,7 @@
                               <h3>
                                 <a class="post-title post-title-sm" href="article.html"><?=$topic?></a>
                               </h3>
-                              <p class="card-text"><?=$descr?></p>
+                              <p class="card-text" id="desr"><?=$descr?></p>
                               <div class="content">
                                 <a class="read-more-btn" href="article.html">Read Full Article</a>
                               </div>

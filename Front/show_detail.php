@@ -23,17 +23,10 @@ if ($result) {
     echo 'can not select data';
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php require('subpage/nav2.inc.php');?>
+<?php require('subpage/head.inc.php');?>
 <body>
-    <section class="detail">
+    <!-- <section class="detail">
         <p class="id">id : <?php echo $id;?></p>
         <p class="img_path">img_path : <?php echo $img;?></p>
         <p class="topic">topic : <?php echo $topic;?></p>
@@ -42,6 +35,13 @@ if ($result) {
         <p class="category">category : <?php echo $category;?></p>
         <p class="level">level : <?php echo $level;?></p>
         <p class="date">UploadDate : <?php echo $UploadDate;?></p>
-    </section>
+    </section> -->
+    <?php require('subpage/arti.inc.php');?>
+    <div>
+        <?php require('subpage/footer.inc.php');?>
+    </div>
+    
+    
+   
 </body>
 </html>

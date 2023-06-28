@@ -49,3 +49,6 @@
 background-color: #182A54;
 background-image: none;
 }
+#dropdown-menu {
+    transform: translateY(+13px);
+}

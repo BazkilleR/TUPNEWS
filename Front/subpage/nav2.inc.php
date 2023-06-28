@@ -22,7 +22,7 @@
                             <a class="nav-link" href="#" role="button" data-bs-auto-close="false" aria-expanded="false">
                             ข่าวสาร
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu border-0" id="dropdown-menu">
                                 <li><a class="dropdown-item " href="morning_news.php">ข่าวสารหน้าเสาธง</a></li>
                                 <li><a class="dropdown-item" href="tcas67_news.php">TCAS67</a></li>
                                 <li><a class="dropdown-item" href="camp_news.php">ค่าย</a></li>
@@ -32,7 +32,7 @@
                             <a class="nav-link" href="#" role="button" data-bs-auto-close="true" aria-expanded="false">
                             เอกสาร
                             </a>
-                            <ul class="dropdown-menu" onclick="void(0)">
+                            <ul class="dropdown-menu border-0" id="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item hover-shadow" href="https://drive.google.com/drive/folders/1R21yCvwrFN0XyPd7kMZtuXp2HpDdu956?usp=drive_link" 
                                     >ใบลาเรียน</a>
@@ -63,7 +63,7 @@
                             <a class="nav-link" href="#" role="button" data-bs-auto-close="true" aria-expanded="false">
                                 ติดต่อ
                             </a>
-                            <ul class="dropdown-menu" onclick="void(0)">
+                            <ul class="dropdown-menu border-0" id="dropdown-menu">
                                 <li><a class="dropdown-item" href="contact.php" >คุณครูเตรียม</a></li>
                             </ul>
                         </li>

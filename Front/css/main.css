@@ -1,0 +1,25 @@
+.line2 {
+    border-left: thick solid red !important;
+    border-style:  none  none  none solid;
+    padding: 10px;
+}
+.section > .container > .main-news > .line {
+    border-left: thick solid hotpink !important;
+    border-style:  none  none  none solid;
+    padding: 10px;
+}
+.section > .container > .main-news > .line {
+    border-left: thick solid hotpink !important;
+    border-style:  none  none  none solid;
+    padding: 10px;
+    
+}
+.wbtn {
+    background-color: #182A54 !important;
+    color: whitesmoke !important;
+}
+#carda{
+    color: black;
+    text-decoration: none;
+
+}

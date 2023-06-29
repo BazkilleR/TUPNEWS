@@ -10,31 +10,33 @@
                 </h1>
             </div>
             <?php
-            // conect database
-            include 'server.php';
-            mysqli_query($conn, 'Use tup_news;');
+                // conect database
+                require 'server.php';
+                require 'pagination-v2.class.php';
+                $page = new PaginationV2();
 
-            // check if user use date filter
-            if (empty($_POST['date'])) {
-                $query = "  SELECT * FROM news 
-                            WHERE category='tcas67' 
+                // check if user use date filter
+                if (empty($_POST['date'])) {
+                    $sql = "  SELECT * FROM news 
+                            WHERE category='camp' 
                             ORDER BY UploadDate DESC";
-                $result = mysqli_query($conn, $query);
-            } else {
-                $UploadDate = $_POST['date'];
-                $query =  " SELECT * FROM news 
-                            WHERE category='tcas67' 
+                    $result = $page->query($mysqli, $sql, 5);
+                } else {
+                    $UploadDate = $_POST['date'];
+                    $sql =  " SELECT * FROM news 
+                            WHERE category='camp' 
                             AND UploadDate='$UploadDate'
                             ORDER BY UploadDate DESC";
-                $result = mysqli_query($conn, $query);
-            }
+                    $result = $page->query($mysqli, $sql, 5);
+                }
 
-            // get data
-            while ($dbarr = mysqli_fetch_array($result)) {
-                $topic = $dbarr['topic'];
-                $descr = $dbarr['descr'];
-                $UploadDate = $dbarr['UploadDate'];
-                $img = $dbarr['img'];
+                // get data
+                if ($result) {
+                    while ($dbarr = $result->fetch_assoc()) {
+                        $topic = $dbarr['topic'];
+                        $descr = $dbarr['descr'];
+                        $UploadDate = $dbarr['UploadDate'];
+                        $img = $dbarr['img'];
             ?>
             <div class="newscard">
                 <!-- CARD -->
@@ -52,15 +54,15 @@
                         </div>
                     </div>
                 </div>
-            <?php
-            } 
-            mysqli_close($conn);
-            ?>
-            </div>
-        </div>
-    </section>
-    <?php require('subpage/pagination.inc.php');?>
-    <?php require('subpage/footer.inc.php');?>
+                <?php
+                    }
+                }
+                require('subpage/pagination.inc.php'); //pagination
+                $mysqli->close();
+            echo '</div>';
+        echo '</section>';
+        require('subpage/footer.inc.php'); //footer
+        ?>
 </div>
 </body>
 

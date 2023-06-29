@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light navbar-expand-sm sticky-top bg-faded justify-content-center sticky-top" 
         style="background-color: #182A54;" id="navbar_top">
         <div class="container-fluid navf">
-            <a href="" class="navbar-brand me-auto" style="color: whitesmoke;">
+            <a href="index.php" class="navbar-brand me-auto" style="color: whitesmoke;">
                 <img src="img/TUP41NEWS.png" alt="Logo" class="blogo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -68,7 +68,7 @@
                             </ul>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="search.php">แจ้งปัญหา</a>
+                            <a class="nav-link" href="https://docs.google.com/forms/d/1ajya_yvdgdFQ5YULfKsvhJkotzyHRRT1Xh0gr7zjosY/edit">แจ้งปัญหา</a>
                         </li>
                         <li class="nav-item active searchi">
                             <a class="nav-link" href="search.php"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>

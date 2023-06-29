@@ -6,10 +6,10 @@ require 'server.php';
 $id = $_GET['id']; 
 
 // select data
-$query = "SELECT * FROM news WHERE id='$id'";
-$result = mysqli_query($conn, $query);
+$sql = "SELECT * FROM news WHERE id='$id'";
+$result = $mysqli->query($sql);
 if ($result) {
-    while ($dbarr = mysqli_fetch_array($result)) {
+    while ($dbarr = $result->fetch_assoc()) {
         $id = $dbarr['id'];
         $img = $dbarr['img'];
         $topic = $dbarr['topic'];

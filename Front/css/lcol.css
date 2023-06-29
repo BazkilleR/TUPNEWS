@@ -483,8 +483,11 @@ a.stretched-link::before {
   height: 100%;
   width: 100%;
 }
-.section > .container > .card > .card-body > .post-metea > .second, #second {
-  /* required */
-  position: relative;
-  z-index: 1;
+
+.newscard {
+  border: 1px solid red;
+
+  > .card {
+    border: 1px solid red;
+  }
 }

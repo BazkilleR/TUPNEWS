@@ -40,7 +40,7 @@
                       <div class="card-body px-0 pb-1">
                         <ul class="post-meta mb-2">
                           <li>
-                            <a class="second" id="second" href="<?php echo $category ?>_news.php" ><?= $category ?></a>
+                            <a class="second" id="second" style="position: relative; z-index: 2;" href="<?php echo $category ?>_news.php" ><?= $category ?></a>
                           </li>
                         </ul>
                         <h2>

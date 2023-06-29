@@ -380,10 +380,6 @@
     padding: 0;
     margin: 0;
   }
-  .widget-list .card {
-    border-bottom: 1px dashed #ececec;
-    padding-bottom: 15px;
-  }
   .widget-list .media img {
     height: 80px;
     width: 80px !important;
@@ -474,4 +470,21 @@
 .wbtn {
   background-color: #182A54 !important;
   color: whitesmoke !important;
+}
+#acata {
+  position: relative;
+  z-index: 1;
+}
+a.stretched-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.section > .container > .card > .card-body > .post-metea > .second, #second {
+  /* required */
+  position: relative;
+  z-index: 1;
 }

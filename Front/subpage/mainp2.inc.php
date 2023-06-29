@@ -1,7 +1,7 @@
 <main>
   <section class="section">
     <div class="container mt-5">
-    <div class="main-news">
+      <div class="main-news">
         <h1 class="line">ข่าวล่าสุด</h1>
       </div>
       <div class="row no-gutters-lg ">
@@ -40,11 +40,11 @@
                       <div class="card-body px-0 pb-1">
                         <ul class="post-meta mb-2">
                           <li>
-                            <a href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                            <a class="second" id="second" href="<?php echo $category ?>_news.php" ><?= $category ?></a>
                           </li>
                         </ul>
                         <h2>
-                          <a class="post-title" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
+                          <a class="post-title stretched-link"  href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
                         <p class="card-text"><?= $descr ?></p>
                       </div>
@@ -138,9 +138,9 @@
                                 </div>
                                 <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                               </div>
-                              <div class="card-body px-0 pb-1">
+                              <div class="card-body p-3">
                                 <h3>
-                                  <a class="post-title post-title-sm" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
+                                  <a class="post-title post-title-sm stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                                 </h3>
                                 <p class="card-text"><?= $descr ?></p>
                               </div>
@@ -148,13 +148,27 @@
                           <?php
                           } else { ?>
                             <!-- news -->
-                            <a class="media align-items-center" href="article.html">
+                            <!-- <a class="media align-items-center" href="article.html">
                               <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                               <div class="media-body ml-3">
                                 <h3 style="margin-top:-5px"><?= $topic ?></h3>
                                 <p class="mb-0 small"><?= $descr ?></p>
                               </div>
-                            </a>
+                            </a> -->
+                            <div class="card mb-3 rounded-0" style="max-width: 540px; height: 100px;">
+                              <div class="row ">
+                                <div class="col-md-4">
+                                  <img src="<?= $img ?>" class="img-fluid rounded-0" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><?= $topic ?></h5>
+                                    <p class="card-text"><?= $descr ?></p>
+                                    <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                       <?php
                           }
                           ++$count;

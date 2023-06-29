@@ -26,7 +26,7 @@
         
         <section>
         <div class="container-fluid mt-5">
-            <?php
+        <?php
             // conect database
             include 'server.php';
             mysqli_query($conn, 'Use tup_news;');
@@ -52,7 +52,7 @@
                 $descr = $dbarr['descr'];
                 $UploadDate = $dbarr['UploadDate'];
                 $img = $dbarr['img'];
-            ?>
+            ?>  
             <div class="newscard">
                 <!-- CARD -->
                 <div class="card mb-3" style="max-width: 540px;">

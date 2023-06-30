@@ -13,6 +13,9 @@
     width: 700px;
     height: 700px;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .datek {
     display: flex;

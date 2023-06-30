@@ -37,11 +37,6 @@ if ($result) {
         <p class="date">UploadDate : <?php echo $UploadDate;?></p>
     </section> -->
     <?php require('subpage/arti.inc.php');?>
-    <div>
-        <?php require('subpage/footer.inc.php');?>
-    </div>
-    
-    
-   
+    <?php require('subpage/footer.inc.php');?>
 </body>
 </html>

@@ -34,7 +34,7 @@
                             </a>
                             <ul class="dropdown-menu border-0" id="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item hover-shadow" href="https://drive.google.com/drive/folders/1R21yCvwrFN0XyPd7kMZtuXp2HpDdu956?usp=drive_link" 
+                                    <a class="dropdown-item hover-shadow" href="https://drive.google.com/file/d/1_6ixfzVUNu7TZ-07vNhZLch_1B2pF94d/view?usp=drive_link" 
                                     >ใบลาเรียน</a>
                                 </li>
                                 <li>

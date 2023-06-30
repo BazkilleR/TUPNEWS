@@ -1,6 +1,6 @@
 <div class="container-fluid arti" id="arti">
     <div class="imgarti">
-        <img src="<?=$img?>"
+        <img src="<?=$img?>">
     </div>
     <div class="details">
         <div class="artide">

@@ -27,8 +27,8 @@
 
                 if ($count == 0) { ?>
                   <!-- main news -->
-                  <div class="col-12 mb-4">
-                    <article class="card article-card">
+                  <div class="col-12 mb-4 ">
+                    <article class="card article-card border-0">
                       <a href="article.html">
                         <div class="card-image">
                           <div class="post-info">
@@ -54,7 +54,7 @@
                 } else { ?>
                   <!-- news -->
                   <div class="col-md-6 mb-4">
-                    <article class="card article-card article-card-sm h-100">
+                    <article class="card article-card article-card-sm h-100 border-0">
                       <a href="article.html">
                         <div class="card-image">
                           <div class="post-info">
@@ -131,7 +131,7 @@
 
                           if ($count == 0) { ?>
                             <!-- big news -->
-                            <article class="card mb-4">
+                            <article class="card mb-4 round-0 border-0">
                               <div class="card-image">
                                 <div class="post-info">
                                   <span class="text-uppercase"><?= $UploadDate ?></span>
@@ -169,23 +169,23 @@
                                 </div>
                               </div>
                             </div> -->
-                            <div class="card h-100 mb-3 round-0">
-                              <div class="row">
-                                <div>
-                                  <img src="">
+                            <div class="card h-100 mb-3 round-0 border-0 ">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="<?= $img ?>" style="height: 100%; width: 100%; object-fit: cover;">
                                 </div>
-                                <div class="card-body">
-                                  <div>
-                                    <h5 class="card-title">
-                                    ayo
-                                    </h5>
-                                    <p>TEST</p>
+                                <div  class="col-md-8">
+                                  <div class="card-body">
+                                    <div>
+                                      <h5 class="card-title">
+                                        <a class="post-title post-title-sm stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
+                                      </h5>
+                                    </div>
+                                    <div>
+                                      <p><?= $descr ?></p>
+                                      <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php" ><?= $category ?></a>
+                                    </div>
                                   </div>
-                                  <div>
-                                    <a class="second" id="second" style="position: relative; z-index: 2;" href="<?php echo $category ?>_news.php" ><?= $category ?></a>
-                                  </div>
-                                  
-                                  
                                 </div>
                               </div>
                             </div>

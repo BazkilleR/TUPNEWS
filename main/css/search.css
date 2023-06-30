@@ -48,8 +48,12 @@
     gap: 20px;
 }
 .fakesearch {
-    transform: translateX(310px);
+    transform: translateX(255px);
 }
 .camptext h1 {
     font-size: 60px;
+}
+/* searchbox on morning news */
+input:focus::placeholder {
+    color: transparent;
 }

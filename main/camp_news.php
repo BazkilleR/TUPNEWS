@@ -1,18 +1,15 @@
-<?php require('subpage/head.inc.php'); ?>
-
+<?php require('subpage/head.inc.php');?>
 <body>
-    <div id="flex-container">
-        <?php require('subpage/nav2.inc.php'); ?>
-        <section>
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-center">
-                    <div>
-                        <h1>
-                            CAMP
-                        </h1>
-                    </div>
-                </div>
-                <?php
+<div id="flex-container">
+    <?php require('subpage/nav2.inc.php');?>
+    <section>
+        <div class="container-fluid">
+            <div class="camptext mt-5 mb-3">
+                <h1>
+                    ค่าย
+                </h1>
+            </div>
+            <?php
                 // conect database
                 require 'server.php';
                 require 'pagination-v2.class.php';
@@ -40,25 +37,24 @@
                         $descr = $dbarr['descr'];
                         $UploadDate = $dbarr['UploadDate'];
                         $img = $dbarr['img'];
-                ?>
-                        <div class="newscard">
-                            <!-- CARD -->
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="<?= $img ?>" class="img-fluid rounded-start">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $topic ?></h5>
-                                            <p class="card-text"><?= $descr ?></p>
-                                            <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
-                                        </div>
-                                    </div>
-                                </div>
+            ?>
+            <div class="newscard">
+                <!-- CARD -->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="<?= $img ?>" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $topic ?></h5>
+                                <p class="card-text"><?= $descr ?></p>
+                                <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
                             </div>
                         </div>
-        <?php
+                    </div>
+                </div>
+                <?php
                     }
                 }
                 require('subpage/pagination.inc.php'); //pagination
@@ -67,7 +63,7 @@
         echo '</section>';
         require('subpage/footer.inc.php'); //footer
         ?>
-        </div>
+</div>
 </body>
 
 </html>

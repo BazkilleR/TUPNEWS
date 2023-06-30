@@ -1,6 +1,64 @@
+/* card display */
 .newscard {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
+/* make text appear ... */
+#desr { 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* card layout */
+.article-card {
+    padding: 30px;
+    border: 0;
+  }
+/* line infront of text */
+.line2 {
+    border-left: thick solid red !important;
+    border-style:  none  none  none solid;
+    padding: 10px;
+  }
+.section > .container > .main-news > .line {
+    border-left: thick solid hotpink !important;
+    border-style:  none  none  none solid;
+    padding: 10px;
+  }
+#cimg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#carda{
+    color: black;
+    text-decoration: none;
+
+}
+
+.section > .container > .main-news > .line
+,.line2 {
+  border-left: thick solid hotpink !important;
+  border-style:  none  none  none solid;
+  padding: 10px;
+}
+.section > .container > .main-news > .line {
+  border-left: thick solid hotpink !important;
+  border-style:  none  none  none solid;
+  padding: 10px;
+  
+}
+.wbtn {
+  background-color: #182A54 !important;
+  color: whitesmoke !important;
+}
+#carda{
+  color: black;
+  text-decoration: none;
+}
+.citem {
+  display: flex;
+  flex-flow: row wrap;
+}
+/* morning news */

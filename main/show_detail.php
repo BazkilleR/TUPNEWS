@@ -3,7 +3,7 @@
 require 'server.php';
 
 // get id from url
-$id = $_GET['id'];
+$id = $_GET['id']; 
 
 // select data
 $sql = "SELECT * FROM news WHERE id='$id'";
@@ -14,7 +14,7 @@ if ($result) {
         $img = $dbarr['img'];
         $topic = $dbarr['topic'];
         $descr = $dbarr['descr'];
-        $content = nl2br($dbarr['content']);
+        $content = $dbarr['content'];
         $category = $dbarr['category'];
         $level = $dbarr['level'];
         $UploadDate = $dbarr['UploadDate'];
@@ -23,28 +23,25 @@ if ($result) {
     echo 'can not select data';
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
+<?php require('subpage/nav2.inc.php');?>
+<?php require('subpage/head.inc.php');?>
 <body>
-    <section class="detail">
-        <p>id : <?=$id?></p> 
-        <p>img_path : <?=$img?></p>
-        <p>topic : <?=$topic?></p>
-        <p>descr : <?=$descr?></p>
-        <p>content :<br><?=$content?></p>
-        <p>category : <?=$category?></p>
-        <p>level : <?=$level?></p>
-        <p>UploadDate : <?=$UploadDate?></p>
-    </section>
+    <!-- <section class="detail">
+        <p class="id">id : <?php echo $id;?></p>
+        <p class="img_path">img_path : <?php echo $img;?></p>
+        <p class="topic">topic : <?php echo $topic;?></p>
+        <p class="descr">descr : <?php echo $descr;?></p>
+        <p class="content">content : <?php echo $content;?></p>
+        <p class="category">category : <?php echo $category;?></p>
+        <p class="level">level : <?php echo $level;?></p>
+        <p class="date">UploadDate : <?php echo $UploadDate;?></p>
+    </section> -->
+    <?php require('subpage/arti.inc.php');?>
+    <div>
+        <?php require('subpage/footer.inc.php');?>
+    </div>
+    
+    
+   
 </body>
-
 </html>

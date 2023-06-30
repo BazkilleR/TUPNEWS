@@ -30,13 +30,9 @@
 <?php require('subpage/head.inc.php');?>
 <body>
     <?php require('subpage/nav2.inc.php');?>
-    <form name="search" method="post">
-        <input type="text" placeholder="Search.." name="input">
-        <button type="submit"><a href="#"><i class="fa fa-search"></i></a></button>
-    </form>
-    <ol>
-        <?php echo $output; ?>
-    </ol>
+    <?php require('subpage/search.inc.php');?>
+    <?php require('subpage/pagination.inc.php');?>
+    <?php require('subpage/footer.inc.php');?>
 </body>
 
 </html>

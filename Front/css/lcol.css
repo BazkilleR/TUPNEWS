@@ -64,7 +64,7 @@
     letter-spacing: 2px;
   }
   .card-meta li a:hover {
-    color: #13AE6F;
+    color: hotpink;
   }
   .card-footer {
     background-color: transparent;
@@ -117,10 +117,10 @@
     color: #000;
     display: inline;
     text-decoration: none;
-    background-image: linear-gradient(#3deaa4, #3deaa4);
-    background-position: 0% 80%;
+    background-image: linear-gradient(#FFB6C1, #FFB6C1);
+    background-position: 0% 90%;
     background-repeat: no-repeat;
-    background-size: 0% 8px;
+    background-size: 0% 4px;
     transition: background-size 0.3s;
   }
   .post-title-sm {
@@ -156,7 +156,7 @@
   }
   .pagination .page-item .page-link:focus, .pagination .page-item .page-link:hover {
     box-shadow: none;
-    background: #13AE6F;
+    background: hotpink;
     color: #fff;
   }
   .pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
@@ -491,3 +491,7 @@ a.stretched-link::before {
     border: 1px solid red;
   }
 }
+/* * { 
+  border: 1px solid red;
+  
+} */

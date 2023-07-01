@@ -1,6 +1,6 @@
 <?php require('subpage/head.inc.php');?>
 <body>
-  <?php require('subpage/nav2.inc.php');?>
+  <?php require('subpage/nav3.inc.php');?>
   <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -25,5 +25,4 @@
 <?php require('subpage/mainp2.inc.php');?>
 <?php require('subpage/footer.inc.php');?>
 </body>
-
 </html>

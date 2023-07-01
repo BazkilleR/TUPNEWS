@@ -19,9 +19,9 @@
                             <a class="nav-link" href="index.php">หน้าหลัก</a>
                         </li>
                         <li class="nav-item dropdown arrow-hidden">
-                            <a class="nav-link" href="#" role="button" data-bs-auto-close="false" aria-expanded="false">
+                            <button class="nav-link" href="#" role="button" data-bs-auto-close="false" aria-expanded="false">
                             ข่าวสาร
-                            </a>
+                            </button>
                             <ul class="dropdown-menu border-0" id="dropdown-menu">
                                 <li><a class="dropdown-item " href="morning_news.php">ข่าวสารหน้าเสาธง</a></li>
                                 <li><a class="dropdown-item" href="tcas67_news.php">TCAS67</a></li>

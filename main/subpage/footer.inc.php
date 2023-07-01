@@ -1,5 +1,5 @@
 <div class="mt-auto">
-    <img class="fimg" src="img/ลายโบว์ ม.ปลาย.png">
+    <img class="fimg" src="img/linebow.png">
 </div>
 <footer class="footer">
 	<div class="container-fluid">

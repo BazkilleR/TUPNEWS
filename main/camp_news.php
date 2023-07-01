@@ -6,7 +6,7 @@
         <section>
             <div class="camptext mt-5 mb-3">
                 <h1>
-                    TCAS67
+                    CAMP
                 </h1>
             </div>
             <div class="flex-container">

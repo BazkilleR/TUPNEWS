@@ -1,15 +1,16 @@
-<?php require('subpage/head.inc.php');?>
+<?php require('subpage/head.inc.php'); ?>
+
 <body>
-<div id="flex-container">
-    <?php require('subpage/nav2.inc.php');?>
-    <section>
-        <div class="container-fluid">
+    <div id="flex-container">
+        <?php require('subpage/nav2.inc.php'); ?>
+        <section>
             <div class="camptext mt-5 mb-3">
                 <h1>
-                    ค่าย
+                    TCAS67
                 </h1>
             </div>
-            <?php
+            <div class="flex-container">
+                <?php
                 // conect database
                 require 'server.php';
                 require 'pagination-v2.class.php';
@@ -33,37 +34,40 @@
                 // get data
                 if ($result) {
                     while ($dbarr = $result->fetch_assoc()) {
+                        $id = $dbarr['id'];
                         $topic = $dbarr['topic'];
                         $descr = $dbarr['descr'];
                         $UploadDate = $dbarr['UploadDate'];
                         $img = $dbarr['img'];
-            ?>
-            <div class="newscard">
-                <!-- CARD -->
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="<?= $img ?>" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $topic ?></h5>
-                                <p class="card-text"><?= $descr ?></p>
-                                <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
+                        $category = $dbarr['category'];
+                ?>
+                        <!-- output -->
+                        <div class="box">
+                            <div class="img">
+                                <img src="<?= $img ?>">
+                            </div>
+                            <div class="content">
+                                <div class="topic">
+                                    <a href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
+                                </div>
+                                <div class="category-date">
+                                    <p class="category"><?= $category ?></p>
+                                    <p class="date"><?= $UploadDate ?></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
                 <?php
                     }
                 }
                 require('subpage/pagination.inc.php'); //pagination
                 $mysqli->close();
-            echo '</div>';
-        echo '</section>';
-        require('subpage/footer.inc.php'); //footer
+                ?>
+
+            </div>
+        </section>
+        <?php require('subpage/footer.inc.php'); //footer
         ?>
-</div>
+    </div>
 </body>
 
 </html>

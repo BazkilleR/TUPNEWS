@@ -4,12 +4,12 @@
     <div id="flex-container">
         <?php require('subpage/nav2.inc.php'); ?>
         <section>
-            <div class="container-fluid">
-                <div class="camptext mt-5 mb-3">
-                    <h1>
-                        TCAS67
-                    </h1>
-                </div>
+            <div class="camptext mt-5 mb-3">
+                <h1>
+                    TCAS67
+                </h1>
+            </div>
+            <div class="flex-container">
                 <?php
                 // conect database
                 require 'server.php';
@@ -34,25 +34,25 @@
                 // get data
                 if ($result) {
                     while ($dbarr = $result->fetch_assoc()) {
+                        $id = $dbarr['id'];
                         $topic = $dbarr['topic'];
                         $descr = $dbarr['descr'];
                         $UploadDate = $dbarr['UploadDate'];
                         $img = $dbarr['img'];
+                        $category = $dbarr['category'];
                 ?>
-                        <div class="newscard">
-                            <!-- CARD -->
-                            <div class="card mb-3 rounded-0 " style="max-width: 50%; height: 250px;">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <img src="<?= $img ?>" class="img-fluid rounded-0">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $topic ?></h5>
-                                            <p class="card-text"><?= $descr ?></p>
-                                            <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
-                                        </div>
-                                    </div>
+                        <!-- output -->
+                        <div class="box">
+                            <div class="img">
+                                <img src="<?= $img ?>">
+                            </div>
+                            <div class="content">
+                                <div class="topic">
+                                    <a href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
+                                </div>
+                                <div class="category-date">
+                                    <p class="category"><?= $category ?></p>
+                                    <p class="date"><?= $UploadDate ?></p>
                                 </div>
                             </div>
                         </div>

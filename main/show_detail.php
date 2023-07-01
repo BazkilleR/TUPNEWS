@@ -15,6 +15,7 @@ if ($result) {
         $topic = $dbarr['topic'];
         $descr = $dbarr['descr'];
         $content = $dbarr['content'];
+        $formattedContent = nl2br($content);
         $category = $dbarr['category'];
         $level = $dbarr['level'];
         $UploadDate = $dbarr['UploadDate'];
@@ -41,7 +42,6 @@ if ($result) {
         <?php require('subpage/footer.inc.php');?>
     </div>
     
-    
-   
+    <script src="js/newline.js"></script>
 </body>
 </html>

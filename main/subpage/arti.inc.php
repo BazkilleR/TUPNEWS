@@ -12,7 +12,7 @@
                 <H1><?=$topic?></H1>
             </div>
             <div class="contenta mt-5">
-                <p><?=$content?></p>
+                <p><?php echo $formattedContent . '<br><br>'?></p>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
                     <h5 class="offcanvas-title" id="offcanvasLabel">TUP41NEWS</h5>
                     <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body"  onclick="void(0)">
                     <ul class="navbar-nav ms-auto" >
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php">หน้าหลัก</a>

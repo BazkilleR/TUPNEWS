@@ -105,7 +105,7 @@
                   <div class="d-grid gap-2 widget-head ">
                     <a href="http://43.229.77.153/~ztrad/tup_conn34/" class="btn wbtn rounded-0 btn-lg " role="button" type="button">รายงานผลการเรียน
                     </a>
-                    <a href="" class="btn wbtn rounded-0 btn-lg wbtn" role="button" type="button">ทำเนียบคณะกรรมการ ม.6
+                    <a href="palace.php" class="btn wbtn rounded-0 btn-lg wbtn" role="button" type="button">ทำเนียบคณะกรรมการ ม.6
                     </a>
                   </div>
                   <!-- button -->

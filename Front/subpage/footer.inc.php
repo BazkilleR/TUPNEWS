@@ -1,14 +1,14 @@
-<div class="mt-auto">
-    <img class="fimg" src="img/ลายโบว์ ม.ปลาย.png">
-</div>
-<footer class="footer">
+<!-- <div class="mt-auto">
+    <img class="fimg1" src="img/linebow.png">
+</div> -->
+<footer class="footer mt-auto">
 	<div class="container-fluid">
 		<div class="me-auto foot">
 			<div class="fimg">
                 <img class="fimg" src="img/logo.PNG">
             </div>
             <div class="d-flex flex-column foote">
-                <p class="toptxt" style="font-size: 15px; font-weight: normal; opacity: 90%;">Board of High school Grade 6, T.U.P 41</p>
+                <p class="toptxt" id="test" style="font-size: 15px; font-weight: normal; opacity: 90%; text-align:justify;">Board of High school Grade 6, T.U.P 41</p>
                 <p class="downtxt" style="font-size: 18px; font-weight: normal;">TRIAMUDOMSUKSA PATTANAKARN SCHOOL</p>
                 <div>
                 <a href="https://instagram.com/tup41centre?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>

@@ -1,6 +1,7 @@
 .foot {
   display: flex;
   flex-direction: row;
+  bottom: 0;
 }
 #flex-container {
   display: flex;
@@ -15,6 +16,9 @@
   background-color: #182A54;
   color: whitesmoke;
   padding: 20px 0;
+  bottom: 0;
+  position: relative;
+  width: 100%;
 }
 .footer p {
   margin-bottom: 0;
@@ -28,8 +32,17 @@
   object-fit: cover;
   max-width: 100px;
 }
-.fimg {
-  object-fit: fill;
+.fimg1 {
+  object-fit: cover;
   width: auto;
   height: auto;
+  max-width: 100%;
+}
+.fimg {
+  object-fit: cover;
+  width: auto;
+  height: auto;
+}
+.footer > .container > .foot > .foote > .toptxt {
+  text-align:justify;
 }

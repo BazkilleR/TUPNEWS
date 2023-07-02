@@ -1,17 +1,16 @@
-
+/* * {
+    border: 1px solid red;
+  } */
 .arti, #arti {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    margin: auto;
-    
 
 }
 .arti > .imgarti > img {
-    width: 700px;
-    height: 700px;
+    width: 75%;
+    height: 75%;
     object-fit: cover;
     display: flex;
     justify-content: center;
@@ -34,6 +33,4 @@
 }
 .contenta   {
     border-top: 2px solid #E5E4E2 !important;
-    border
-
 }

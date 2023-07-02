@@ -25,7 +25,7 @@ if ($result) {
 ?>
 <?php require('subpage/nav2.inc.php');?>
 <?php require('subpage/head.inc.php');?>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- <section class="detail">
         <p class="id">id : <?php echo $id;?></p>
         <p class="img_path">img_path : <?php echo $img;?></p>

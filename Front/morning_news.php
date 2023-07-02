@@ -1,6 +1,5 @@
 <?php require('subpage/head.inc.php'); ?>
-
-<body>
+<body >
     <div id="flex-container">
         <?php require('subpage/nav2.inc.php'); ?>
         <section>

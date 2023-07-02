@@ -182,7 +182,7 @@
                                       </h5>
                                     </div>
                                     <div>
-                                      <p><?= $descr ?></p>
+                                      
                                       <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php" ><?= $category ?></a>
                                     </div>
                                   </div>

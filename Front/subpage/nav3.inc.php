@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg stick-top" id="navbar_top" style="background-color: #182A54; z-index: 3;" >
+<nav class="navbar navbar-expand-lg stick-top" id="navbar_top" style="background-color: #182A54;" >
   <div class="container-fluid navf">
     <a href="index.php" class="navbar-brand me-auto"  style="color: whitesmoke;">
         <img src="img/TUP41NEWS.png" alt="Logo" class="blogo">

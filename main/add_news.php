@@ -1,13 +1,13 @@
-
-<?php require('subpage/head.inc.php');?>
+<?php require('subpage/head.inc.php'); ?>
 <style>
     input {
-            margin-bottom: 1rem;
-        }
+        margin-bottom: 1rem;
+    }
 </style>
 <title>addnews</title>
+
 <body>
-    <?php require('subpage/nav2.inc.php');?>
+    <?php require('subpage/nav2.inc.php'); ?>
     <form action="add_news_db.php" method="post" enctype="multipart/form-data">
         <!-- topic -->
         <p>หัวข้อ</p>
@@ -39,4 +39,5 @@
         <input type="submit" name="submit" value="ลงข่าว">
     </form>
 </body>
+
 </html>

@@ -7,8 +7,8 @@ if (isset($_POST['id'])) {
         require('server.php');
 
         // Get the image path and delete the photo file
-        $query = "SELECT img FROM news WHERE id='$id'";
-        $result = mysqli_query($conn, $query);
+        $sql = "SELECT img FROM news WHERE id='$id'";
+        $result = $mysqli->query($sql);
         
         if ($result && mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
@@ -17,8 +17,8 @@ if (isset($_POST['id'])) {
             
             if ($del_img) {
                 // Delete the row
-                $query = "DELETE FROM news WHERE id='$id'";
-                $result = mysqli_query($conn, $query);
+                $sql = "DELETE FROM news WHERE id='$id'";
+                $result = $mysqli->query($sql);
                 
                 if ($result) {
                     // Deletion successful
@@ -35,7 +35,7 @@ if (isset($_POST['id'])) {
             echo 'News item not found.';
         }
 
-        mysqli_close($conn);
+        $mysqli->close();
     } else {
         echo 'Please select an ID.';
         echo "<a href='delete_news.php'>BACK</a>";
@@ -43,4 +43,3 @@ if (isset($_POST['id'])) {
 } else {
     echo 'Invalid request.';
 }
-?>

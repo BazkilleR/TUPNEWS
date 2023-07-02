@@ -32,7 +32,7 @@ if ($isValidInput) {
             $targetDir = 'news_img/';
             $fileImg = $targetDir . $fileName;
             $fileTemp = $_FILES['img']['tmp_name'];
-            
+
             if (move_uploaded_file($fileTemp, $fileImg)) {
                 // Insert data into the database using prepared statements
                 $query = "INSERT INTO news (topic, descr, content, category, level, UploadDate, img) VALUES (?, ?, ?, ?, ?, NOW(), ?)";

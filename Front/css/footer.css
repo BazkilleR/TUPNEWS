@@ -43,6 +43,6 @@
   width: auto;
   height: auto;
 }
-.footer > .container > .foot > .foote > .toptxt {
+.footer > .container > .foot > .foote > .toptxt , #test {
   text-align:justify;
 }

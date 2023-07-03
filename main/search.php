@@ -21,7 +21,7 @@
                     echo <<<HTML
                 <div class="camptext mt-5 mb-3">
                     <h1>
-                        Result of '<span style='color: pink;'>$search_input</span>'
+                        Result of '<span style='color: #ee6fff;'>$search_input</span>'
                     </h1>
                 </div>
                 HTML;

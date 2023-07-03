@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/arti.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/category_news.css">
+    <link rel="stylesheet" href="css/add_new.css">
     <!-- <script src="js/main.js"></script> -->
     <script src="https://kit.fontawesome.com/2a167d09ca.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

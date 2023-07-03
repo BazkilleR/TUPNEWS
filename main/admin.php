@@ -7,20 +7,20 @@
     <h1 class="title">ADMIN PANAL</h1>
     <section class="grid-container">
         <div class="menu">
-            <ul>
-                <li><a href="add_news.php">Add</a></li>
-                <li><a href="delete_news.php">Delete</a></li>
-                <li><a href="update_news.php">Update</a></li>
-            </ul>
+            <a class="btn btn-primary" href="add_news.php" role="button">Add</a>
+            <a class="btn btn-primary" href="delete_news.php" role="button">Delete</a>
+            <a class="btn btn-primary" href="update_news.php" role="button">Update</a>
         </div>
-        <table class="database">
-            <tr>
-                <th style="width: 5%;">ID</th>
-                <th>TOPIC</th>
-                <th style="width: 15%;">CATEGORY</th>
-                <th style="width: 10%;">LEVEL</th>
-                <th style="width: 25%;">UPLOADDATE</th>
-            </tr>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">LV.</th>
+                    <th scope="col">UploadDate</th>
+                </tr>
+            </thead>
             <?php
             require 'server.php';
 
@@ -33,19 +33,22 @@
                     $topic = $dbarr['topic'];
                     $level = $dbarr['level'];
                     $UploadDate = $dbarr['UploadDate'];
-                    $category = $dbarr['category']; ?>
-                    <tr>
-                        <td><?php echo $id; ?></td>
-                        <td><a href="#"><?php echo $topic; ?></a></td>
-                        <td><?php echo $category; ?></td>
-                        <td><?php echo $level; ?></td>
-                        <td><?php echo $UploadDate; ?></td>
-                    </tr>
-            <?php
+                    $category = $dbarr['category'];
+                    echo <<<HTML
+                    <tbody>
+                        <tr>
+                            <th scope="row">$id</th>
+                            <td>$topic</td>
+                            <td>$category</td>
+                            <td>$level</td>
+                            <td>$UploadDate</td>
+                        </tr>
+                    HTML;
                 }
             }
             $mysqli->close();
             ?>
+            </tbody>
         </table>
     </section>
 </body>

@@ -19,14 +19,14 @@ body {
     & input[type=date] {
         font-size: 1.25rem;
         padding: .25rem;
-        background-color: #dfdfdfd0;
+        background-color: #dfdfdf83;
         border: none;
     }
 
     & input[type=submit] {
         font-size: 1.25rem;
         padding: .25rem;
-        background-color: #dfdfdfd0;
+        background-color: #dfdfdf83;
         border: none;
     }
 }
@@ -44,7 +44,7 @@ body {
         width: 50%;
         flex-direction: column;
         justify-content: space-between;
-        background-color: #dfdfdfd0;
+        background-color: #dfdfdf83;
 
         >div {
             margin: 0.7rem;
@@ -67,7 +67,7 @@ body {
             justify-content: space-between;
 
             >.category {
-                color: pink;
+                color: #ee6fff;
             }
 
             >p {

@@ -18,14 +18,14 @@ body {
     & input[type=date] {
         font-size: 1.25rem;
         padding: .25rem;
-        background-color: #dfdfdfd0;
+        background-color: #dfdfdf83;
         border: none;
     }
 
     & input[type=submit] {
         font-size: 1.25rem;
         padding: .25rem;
-        background-color: #dfdfdfd0;
+        background-color: #dfdfdf83;
         border: none;
     }
 }
@@ -42,7 +42,7 @@ body {
         display: flex;
         height: 250px;
         width: 50%;
-        background-color: #dfdfdfd0;
+        background-color: #dfdfdf83;
 
         >.img {
             width: 50%;
@@ -82,7 +82,7 @@ body {
                 }
 
                 >.category {
-                    color: pink;
+                    color: #ee6fff;
                 }
             }
         }

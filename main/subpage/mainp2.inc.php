@@ -147,6 +147,28 @@
                             </article>
                           <?php
                           } else { ?>
+                            <!-- news -->
+                            <!-- <a class="media align-items-center" href="article.html">
+                              <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
+                              <div class="media-body ml-3">
+                                <h3 style="margin-top:-5px"><?= $topic ?></h3>
+                                <p class="mb-0 small"><?= $descr ?></p>
+                              </div>
+                            </a> -->
+                            <!-- <div class="card h-100 mb-3 rounded-0" style="max-width: 540px;">
+                              <div class="row no-gutters">
+                                <div class="col-md-4">
+                                  <img src="<?= $img ?>" class="img-fluid rounded-0" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title"><?= $topic ?></h5>
+                                    <p class="card-text"><?= $descr ?></p>
+                                    <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
                             <div class="card h-100 mb-3 round-0 border-0 ">
                               <div class="row g-0">
                                 <div class="col-md-4">
@@ -160,7 +182,6 @@
                                       </h5>
                                     </div>
                                     <div>
-                                      <p><?= $descr ?></p>
                                       <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                                     </div>
                                   </div>

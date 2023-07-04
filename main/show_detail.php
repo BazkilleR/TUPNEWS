@@ -28,12 +28,11 @@ require('subpage/nav2.inc.php');
 require('subpage/head.inc.php');
 ?>
 
-<body>
-    <?php require('subpage/arti.inc.php'); ?>
-    <div>
-        <?php require('subpage/footer.inc.php'); ?>
-    </div>
-
+<body class="d-flex flex-column min-vh-100">
+    <?php
+    require('subpage/arti.inc.php');
+    require('subpage/footer.inc.php'); 
+    ?>
     <script src="js/newline.js"></script>
 </body>
 

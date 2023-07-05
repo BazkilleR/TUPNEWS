@@ -18,14 +18,14 @@
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <div class="atext">
-                  <h1>คุณครูปกรกาญจน์ ลานรอบ</h1>
-                  <h1>6/4,6</h1>
-                  <h1>0xx-xxx-xxxx</h1>
+                  <p>คุณครูปกรกาญจน์ ลานรอบ</p>
+                  <p>6/4,6</p>
+                  <p>0xx-xxx-xxxx</p>
                 </div>
                 <div class="atext">
-                  <h1>คุณครูธิษณาวดี ดิษฐวิเศษ</h1>
-                  <h1>6/5</h1>
-                  <h1>0xx-xxx-xxxx</h1>
+                  <p>คุณครูธิษณาวดี ดิษฐวิเศษ</p>
+                  <p>6/5</p>
+                  <p>0xx-xxx-xxxx</p>
                 </div>
               </div>
             </div>
@@ -37,8 +37,8 @@
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+              <div class="accordion-body">
+                <p>ไม่มีข้อมูล</p>
               </div>
             </div>
           </div>
@@ -49,8 +49,8 @@
               </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+              <div class="accordion-body">
+                <p>ไม่มีข้อมูล</p>
               </div>
             </div>
           </div>
@@ -61,8 +61,8 @@
               </button>
             </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+              <div class="accordion-body">
+                <p>ไม่มีข้อมูล</p>
               </div>
             </div>
           </div>
@@ -73,8 +73,8 @@
               </button>
             </h2>
             <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+              <div class="accordion-body">
+                <p>ไม่มีข้อมูล</p>
               </div>
             </div>
           </div>
@@ -85,8 +85,8 @@
               </button>
             </h2>
             <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+              <div class="accordion-body">
+                <p>ไม่มีข้อมูล</p>
               </div>
             </div>
           </div>
@@ -97,14 +97,13 @@
               </button>
             </h2>
             <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+              <div class="accordion-body">
+                <p>ไม่มีข้อมูล</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>

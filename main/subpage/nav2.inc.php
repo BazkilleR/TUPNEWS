@@ -21,7 +21,7 @@
                             ข่าวสาร
                         </a>
                         <ul class="dropdown-menu border-0" id="dropdown-menu">
-                            <li><a class="dropdown-item " href="morning_news.php">ข่าวสารหน้าเสาธง</a></li>
+                            <li><a class="dropdown-item" href="morning_news.php">รอบรั้วเตรียมพัฒน์</a></li>
                             <li><a class="dropdown-item" href="tcas67_news.php">TCAS67</a></li>
                             <li><a class="dropdown-item" href="camp_news.php">ค่าย</a></li>
                         </ul>
@@ -47,7 +47,7 @@
                                 <a class="dropdown-item" href="http://www.tup.ac.th/downloads/calendar-2566.pdf">ปฎิทินประจำปีการศึกษา 2566</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="camp_news.php">ใบ ปพ.7</a>
+                                <a class="dropdown-item" href="palace.php">ขั้นตอนการขอใบ ปพ.</a>
                             </li>
                         </ul>
                     </li>
@@ -56,11 +56,21 @@
                             ติดต่อ
                         </a>
                         <ul class="dropdown-menu border-0" id="dropdown-menu">
-                            <li><a class="dropdown-item" href="contact.php">คุณครูเตรียม</a></li>
+                            <li><a class="dropdown-item" href="contact.php">คุณครูเตรียมพัฒน์</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="https://docs.google.com/forms/d/1ajya_yvdgdFQ5YULfKsvhJkotzyHRRT1Xh0gr7zjosY/edit">แจ้งปัญหา</a>
+                    <li class="nav-item dropdown arrow-hidden">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                            แจ้งปัญหา
+                        </a>
+                        <ul class="dropdown-menu border-0" id="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item hover-shadow" href="https://docs.google.com/forms/d/1ajya_yvdgdFQ5YULfKsvhJkotzyHRRT1Xh0gr7zjosY/edit">แบบฟอร์ม</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://lookerstudio.google.com/reporting/b5848f6c-2d89-4cdd-93e3-6248ac7949d5/page/wXxTD">ตรวจสอบปัญหา</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item active searchi">
                         <a class="nav-link" href="search.php"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>

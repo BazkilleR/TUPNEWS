@@ -29,7 +29,7 @@
                 <div class="d-flex align-items-center justify-content-center mt-5">
                     <div>
                         <h1>
-                            ข่าวสารหน้าเสาธง
+                            รอบรั้วเตรียมพัฒน์
                         </h1>
                     </div>
                 </div>
@@ -49,13 +49,13 @@
                     // check if user use date filter
                     if (empty($_POST['date'])) {
                         $sql = "  SELECT * FROM news 
-                            WHERE category='morning' 
+                            WHERE category='รอบรั้วเตรียมพัฒน์' 
                             ORDER BY UploadDate DESC";
                         $result = $page->query($mysqli, $sql, 5);
                     } else {
                         $UploadDate = $_POST['date'];
                         $sql =  " SELECT * FROM news 
-                            WHERE category='morning' 
+                            WHERE category='รอบรั้วเตรียมพัฒน์' 
                             AND UploadDate='$UploadDate'
                             ORDER BY UploadDate DESC";
                         $result = $page->query($mysqli, $sql, 5);
@@ -67,7 +67,12 @@
                             $id = $dbarr['id'];
                             $topic = $dbarr['topic'];
                             $descr = $dbarr['descr'];
+
                             $UploadDate = $dbarr['UploadDate'];
+                            // format jesusYear ti buddhishYear
+                            $buddhistYear = intval(date('Y', strtotime($UploadDate))) + 543;
+                            $buddhistDate = date('d/m/', strtotime($UploadDate)) . $buddhistYear;
+
                             $img = $dbarr['img'];
                             $category = $dbarr['category'];
                     ?>
@@ -77,7 +82,7 @@
                                     <a href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                                 </div>
                                 <div class="category-date">
-                                    <p class="date"><?= $UploadDate ?></p>
+                                    <p class="date"><?=$buddhistDate?></p>
                                     <p class="category"><?= $category ?></p>
                                 </div>
                             </div>

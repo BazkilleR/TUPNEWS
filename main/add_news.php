@@ -39,10 +39,9 @@
             <label class="my-1 mr-2" for="category">หมวดหมู่</label>
             <select class="custom-select my-1 mr-sm-2" name="category">
                 <option selected>เลือกหมวดหมู่</option>
-                <option value="morning">Moring</option>
-                <option value="camp">Camp</option>
-                <option value="tcas67">TCAS67</option>
-                <option value="schedule">Schedule</option>
+                <option value="รอบรั้วเตรียมพัฒน์">รอบรั้วเตรียมพัฒน์</option>
+                <option value="ค่าย">ค่าย</option>
+                <option value="TCAS67">TCAS67</option>
             </select>
         </div>
         <!-- img -->

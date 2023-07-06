@@ -20,7 +20,7 @@
               while ($dbarr = $result->fetch_assoc()) {
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
-                $descr = $dbarr['descr'];
+                $content = $dbarr['content'];
                 $UploadDate = $dbarr['UploadDate'];
                 $category = $dbarr['category'];
                 $img = $dbarr['img'];
@@ -46,7 +46,7 @@
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
-                        <p class="card-text"><?= $descr ?></p>
+                        <p class="card-text" id="descr-content"><?= $content ?></p>
                       </div>
                     </article>
                   </div>
@@ -72,7 +72,7 @@
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
-                        <p class="card-text"><?= $descr ?></p>
+                        <p class="card-text" id="descr-content"><?= $content ?></p>
                       </div>
                     </article>
                   </div>
@@ -124,7 +124,7 @@
                         while ($dbarr = $result->fetch_assoc()) {
                           $id = $dbarr['id'];
                           $topic = $dbarr['topic'];
-                          $descr = $dbarr['descr'];
+                          $content = $dbarr['content'];
                           $UploadDate = $dbarr['UploadDate'];
                           $category = $dbarr['category'];
                           $img = $dbarr['img'];
@@ -142,7 +142,7 @@
                                 <h3>
                                   <a class="post-title post-title-sm stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                                 </h3>
-                                <p class="card-text"><?= $descr ?></p>
+                                <p class="card-text" id="descr-content"><?= $content ?></p>
                               </div>
                             </article>
                           <?php
@@ -152,7 +152,7 @@
                               <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                               <div class="media-body ml-3">
                                 <h3 style="margin-top:-5px"><?= $topic ?></h3>
-                                <p class="mb-0 small"><?= $descr ?></p>
+                                <p class="mb-0 small"><?= $content ?></p>
                               </div>
                             </a> -->
                             <!-- <div class="card h-100 mb-3 rounded-0" style="max-width: 540px;">
@@ -163,8 +163,8 @@
                                 <div class="col-md-8">
                                   <div class="card-body">
                                     <h5 class="card-title"><?= $topic ?></h5>
-                                    <p class="card-text"><?= $descr ?></p>
-                                    <p class="card-text"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
+                                    <p class="card-text" id="descr-content"><?= $content ?></p>
+                                    <p class="card-text" id="descr-content"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
                                   </div>
                                 </div>
                               </div>

@@ -45,15 +45,16 @@ if (isset($_POST['id'])) {
     </form>"
     HTML;
 }
-?>
 
-<?php require('subpage/head.inc.php');?>
+$id = $_GET['id'] ?? NULL; 
+require('subpage/head.inc.php');
+?>
 <body>
     <?php require('subpage/nav2.inc.php');?>
     <h1>UPDATE</h1>
     <!-- select id -->
     <form method="post">
-        <input type="number" name="id" placeholder="select id"><br>
+        <input type="number" name="id" placeholder="กรุณาเลือก ID" value="<?php echo $id?>"><br>
         <input class="btn btn-primary" type="submit" value="submit">
     </form>
     <br>

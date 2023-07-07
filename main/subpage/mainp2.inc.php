@@ -21,6 +21,7 @@
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
                 $content = $dbarr['content'];
+                $formattedContent = nl2br($content);
                 $UploadDate = $dbarr['UploadDate'];
                 $category = $dbarr['category'];
                 $img = $dbarr['img'];
@@ -46,7 +47,7 @@
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
-                        <p class="card-text" id="descr-content"><?= $content ?></p>
+                        <p class="card-text" id="descr-content"><?= $formattedContent ?></p>
                       </div>
                     </article>
                   </div>
@@ -72,7 +73,7 @@
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
-                        <p class="card-text" id="descr-content"><?= $content ?></p>
+                        <p class="card-text" id="descr-content"><?= $formattedContent ?></p>
                       </div>
                     </article>
                   </div>
@@ -125,6 +126,8 @@
                           $id = $dbarr['id'];
                           $topic = $dbarr['topic'];
                           $content = $dbarr['content'];
+                          $content = $dbarr['content'];
+                          $formattedContent = nl2br($content);
                           $UploadDate = $dbarr['UploadDate'];
                           $category = $dbarr['category'];
                           $img = $dbarr['img'];
@@ -142,33 +145,11 @@
                                 <h3>
                                   <a class="post-title post-title-sm stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                                 </h3>
-                                <p class="card-text" id="descr-content"><?= $content ?></p>
+                                <p class="card-text" id="descr-content"><?= $formattedContent ?></p>
                               </div>
                             </article>
                           <?php
                           } else { ?>
-                            <!-- news -->
-                            <!-- <a class="media align-items-center" href="article.html">
-                              <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
-                              <div class="media-body ml-3">
-                                <h3 style="margin-top:-5px"><?= $topic ?></h3>
-                                <p class="mb-0 small"><?= $content ?></p>
-                              </div>
-                            </a> -->
-                            <!-- <div class="card h-100 mb-3 rounded-0" style="max-width: 540px;">
-                              <div class="row no-gutters">
-                                <div class="col-md-4">
-                                  <img src="<?= $img ?>" class="img-fluid rounded-0" style="object-fit: cover;">
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="card-body">
-                                    <h5 class="card-title"><?= $topic ?></h5>
-                                    <p class="card-text" id="descr-content"><?= $content ?></p>
-                                    <p class="card-text" id="descr-content"><small class="text-body-secondary"><?= $UploadDate ?></small></p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div> -->
                             <div class="card h-100 mb-3 round-0 border-0 ">
                               <div class="row g-0">
                                 <div class="col-md-4">

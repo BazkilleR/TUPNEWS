@@ -46,22 +46,30 @@
                             while ($dbarr = $result->fetch_assoc()) {
                                 $id = $dbarr['id'];
                                 $topic = $dbarr['topic'];
-                                $descr = $dbarr['descr'];
+                                $content = $dbarr['content'];
+                                $formattedContent = nl2br($content);
                                 $UploadDate = $dbarr['UploadDate'];
                                 $img = $dbarr['img'];
                                 $category = $dbarr['category'];
                                 echo <<<HTML
-                                <div class="box">
-                                    <div class="img">
-                                        <img src="$img">
-                                    </div>
-                                    <div class="content">
-                                        <div class="topic">
-                                            <a href="show_detail.php?id=$id">$topic</a>
-                                        </div>
-                                        <div class="category-date">
-                                            <p class="category">$category</p>
-                                            <p class="date">$UploadDate</p>
+                                <!-- output -->
+                                <div class="container-sm" style="max-width: 1100px;">
+                                    <div class="card mb-3 mx-1">
+                                        <div class="row g-0">
+                                            <div class="col-md-6">
+                                                <img src="$img" class="img-fluid rounded-start">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body d-flex flex-column justify-content-between" style="height: 100%">
+                                                    <div>
+                                                        <a class="card-title fs-4 text-decoration-none" id="topic" href="show_detail.php?id=$id">$topic</a>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <p class="card-text" style="margin: 0; color: #ee6fff;">$category</p>
+                                                        <p class="card-text text-muted m-0">$UploadDate</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

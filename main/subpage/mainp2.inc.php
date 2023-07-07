@@ -1,11 +1,14 @@
 <main>
   <section class="section">
     <div class="container mt-5">
-      <div class="main-news">
+      <!-- <div class="main-news">
         <h1 class="line">ข่าวล่าสุด</h1>
-      </div>
+      </div> -->
       <div class="row no-gutters-lg ">
         <div class="col-xl-8 mb-5 mb-lg-0">
+          <div class="mt-3">
+            <h1 class="line2">ข่าวสารล่าสุด</h1>
+          </div>
           <div class="row">
             <?php
             // connect db
@@ -47,7 +50,7 @@
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
-                        <p class="card-text" id="descr-content"><?= $formattedContent ?></p>
+                        <!-- <p class="card-text" id="descr-content"><?= $formattedContent ?></p> -->
                       </div>
                     </article>
                   </div>
@@ -73,7 +76,7 @@
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
-                        <p class="card-text" id="descr-content"><?= $formattedContent ?></p>
+                        <!-- <p class="card-text" id="descr-content"><?= $formattedContent ?></p> -->
                       </div>
                     </article>
                   </div>
@@ -103,12 +106,12 @@
               <div class="col-lg-12 col-md-6">
                 <div class="widget">
                   <!-- button -->
-                  <div class="d-grid gap-2 widget-head ">
+                  <!-- <div class="d-grid gap-2 widget-head ">
                     <a href="http://43.229.77.153/~ztrad/tup_conn34/" class="btn wbtn rounded-0 btn-lg " role="button" type="button">รายงานผลการเรียน
                     </a>
                     <a href="palace.php" class="btn wbtn rounded-0 btn-lg wbtn" role="button" type="button">ทำเนียบคณะกรรมการ ม.6
                     </a>
-                  </div>
+                  </div> -->
                   <!-- button -->
                   <div class="mt-3">
                     <h1 class="line2">ข่าวสารสำคัญ</h1>
@@ -145,7 +148,7 @@
                                 <h3>
                                   <a class="post-title post-title-sm stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                                 </h3>
-                                <p class="card-text" id="descr-content"><?= $formattedContent ?></p>
+                                <!-- <p class="card-text" id="descr-content"><?= $formattedContent ?></p> -->
                               </div>
                             </article>
                           <?php
@@ -159,11 +162,11 @@
                                   <div class="card-body">
                                     <div>
                                       <h5 class="card-title">
-                                        <a class="post-title post-title-sm stretched-link" style="font-size: 1.1rem;" id="sub-topic" href="show_detail.php?id=<?php echo $id ?>"><?=$formattedContent?></a>
+                                        <a class="post-title post-title-sm stretched-link" style="font-size: 1.1rem;" id="sub-topic" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                                       </h5>
                                     </div>
                                     <!-- <div>
-                                      <p class="post-title post-title-sm" id="sub-topic"><?=$formattedContent?></p>
+                                      <p class="post-title post-title-sm" id="sub-topic"><?= $formattedContent ?></p>
                                     </div> -->
                                     <div>
                                       <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php"><?= $category ?></a>

@@ -3,7 +3,7 @@
         <div class="imgarti">
             <img src="<?= $img ?>">
         </div>
-        <div class="container" style="">
+        <div class="container">
             <div class="artide">
                 <div class="datek mt-4">
                     <h4 class="me-auto dtxt"><i class="fa-regular fa-calendar" style="margin-right: 10px;"></i><?= $UploadDate ?></h4>

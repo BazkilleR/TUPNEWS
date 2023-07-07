@@ -66,7 +66,6 @@
                         while ($dbarr = $result->fetch_assoc()) {
                             $id = $dbarr['id'];
                             $topic = $dbarr['topic'];
-                            $descr = $dbarr['descr'];
 
                             $UploadDate = $dbarr['UploadDate'];
                             // format jesusYear ti buddhishYear

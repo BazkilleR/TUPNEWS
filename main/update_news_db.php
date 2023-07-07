@@ -7,7 +7,6 @@ if (isset($_GET['id'])) {
 
     // Get input values
     $topic = $_POST['topic'];
-    $descr = $_POST['descr'];
     $content = $_POST['content'];
     $category = $_POST['category'];
     $level = $_POST['level'];
@@ -41,7 +40,6 @@ if (isset($_GET['id'])) {
     // Update data
     $sql =  "UPDATE news SET 
             topic='$topic',
-            descr='$descr',
             content='$content',
             category='$category',
             level='$level',

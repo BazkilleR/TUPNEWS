@@ -13,52 +13,69 @@ if (isset($_POST['id'])) {
     $dbarr = $result->fetch_assoc();
 
     $topic = $dbarr['topic'];
-    $descr = $dbarr['descr'];
     $content = $dbarr['content'];
     $level = $dbarr['level'];
     $category = $dbarr['category'];
     $img = $dbarr['img'];
 
     $output .= <<<HTML
-    <form action="update_news_db.php?id=$id" method="post" enctype="multipart/form-data">
-        <p>หัวข้อ</p>
-        <input type="text" name="topic" value="$topic"><br>
-        <p>คำอธิบาย</p>
-        <input type="text" name="descr" value="$descr"><br>
-        <p>เนื้อหา</p>
-        <textarea name="content" cols="30" rows="10">$content</textarea><br>
-        <label for="level">สำคัญหรือไม่?</label>
-        <input type="radio" name="level" value="1">
-        <label for="yes">ใช่</label>
-        <input type="radio" name="level" checked=true value="0">
-        <label for="no">ไม่ใช่</label><br>
-        <label for="category">หมวดหมู่</label>
-        <select name="category" selected="$category">
-            <option value="morning">Morning</option>
-            <option value="camp">Camp</option>
-            <option value="tcas67">TCAS67</option>
-            <option value="schedule">Schedule</option>
-        </select><br>
-        <label for="img">อัปโหลดรูปภาพ</label>
-        <input type="file" name="img" value="$img"><br>
-        <input type="submit" name="submit" value="edit">
+    <form class="shadow p-3 mb-3 bg-body-tertiary rounded" action="update_news_db.php?id=$id" method="post" enctype="multipart/form-data">
+    <p class="text-center fs-2">ข้อมูล (ID=$id)</p>
+        <div class="mb-3">
+            <label class="form-label">หัวข้อ</label>
+            <input type="text" class="form-control" name="topic" value="$topic">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">เนื้อหา</label>
+            <textarea class="form-control" name="content" cols="30" rows="10">$content</textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-check-label" for="level">สำคัญหรือไม่?</label>
+            <input type="radio" class="form-check-input" name="level" value="1">
+            <label class="form-check-label" for="yes">ใช่</label>
+            <input type="radio" class="form-check-input" name="level" checked=true value="0">
+            <label class="form-check-label" for="no">ไม่ใช่</label>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">หมวดหมู่</label>
+            <select class="form-select" name="category" selected="$category">
+                <option value="morning">Morning</option>
+                <option value="camp">Camp</option>
+                <option value="tcas67">TCAS67</option>
+                <option value="schedule">Schedule</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="img">อัปโหลดรูปภาพ</label>
+            <input type="file" class="form-control" id="formFile" name="img" value="$img">
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="btn btn-warning" name="submit" value="แก้ไข">
+        </div>
     </form>"
     HTML;
 }
 
-$id = $_GET['id'] ?? NULL; 
+$id = $_GET['id'] ?? NULL;
 require('subpage/head.inc.php');
 ?>
+
 <body>
-    <?php require('subpage/nav2.inc.php');?>
-    <h1>UPDATE</h1>
-    <!-- select id -->
-    <form method="post">
-        <input type="number" name="id" placeholder="กรุณาเลือก ID" value="<?php echo $id?>"><br>
-        <input class="btn btn-primary" type="submit" value="submit">
-    </form>
-    <br>
-    <?=$output?>
+    <?php require('subpage/nav2.inc.php'); ?>
+    <div class="container">
+    <p class="text-center fs-1 mt-3">แก้ไขข้อมูล</p>
+        <form method="post" class="shadow p-3 my-3 bg-body-tertiary rounded">
+        <p class="text-center fs-2">เลือก ID</p>
+            <div class="mb-3">
+                <label for="number" class="form-label">ID</label>
+                <input type="number" class="form-control" name="id" placeholder="กรุณาเลือก ID" value="<?php echo $id ?>">
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-warning" value="เลือก">
+            </div>
+        </form>
+        <?= $output ?>
+    </div>
 </body>
 
 </html>

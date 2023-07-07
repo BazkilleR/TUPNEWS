@@ -30,7 +30,7 @@
                         <?php
                         require 'server.php';
 
-                        $sql = 'SELECT * FROM news';
+                        $sql = 'SELECT * FROM news ORDER BY UploadDate DESC';
                         $result = $mysqli->query($sql);
 
                         if ($result) {

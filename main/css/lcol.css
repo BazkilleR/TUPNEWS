@@ -585,6 +585,13 @@ a.stretched-link::before {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+#sub-topic {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
   /* * { 
   border: 1px solid red;
   

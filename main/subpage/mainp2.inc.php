@@ -159,9 +159,12 @@
                                   <div class="card-body">
                                     <div>
                                       <h5 class="card-title">
-                                        <a class="post-title post-title-sm stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
+                                        <a class="post-title post-title-sm stretched-link" style="font-size: 1.1rem;" id="sub-topic" href="show_detail.php?id=<?php echo $id ?>"><?=$formattedContent?></a>
                                       </h5>
                                     </div>
+                                    <!-- <div>
+                                      <p class="post-title post-title-sm" id="sub-topic"><?=$formattedContent?></p>
+                                    </div> -->
                                     <div>
                                       <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                                     </div>

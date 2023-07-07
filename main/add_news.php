@@ -30,10 +30,9 @@
                 <label for="category" class="form-label">หมวดหมู่</label>
                 <select class="form-select" name="category">
                     <option selected>กรุณาเลือกหมวดหมู่</option>
-                    <option value="morning">Morning</option>
-                    <option value="camp">Camp</option>
-                    <option value="tcas67">TCAS67</option>
-                    <option value="schedule">Schedule</option>
+                    <option value="รอบรั้วเตรียมพัฒน์">รอบรั้วเตรียมพัฒน์</option>
+                    <option value="แคมป์">แคมป์</option>
+                    <option value="TCAS67">TCAS67</option>
                 </select>
             </div>
             <div class="mb-3">

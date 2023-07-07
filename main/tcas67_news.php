@@ -4,66 +4,56 @@
     <div id="flex-container">
         <?php require('subpage/nav2.inc.php'); ?>
         <section>
-            <div class="camptext mt-5 mb-3">
-                <h1>
-                    TCAS67
-                </h1>
-            </div>
-            <div class="flex-container">
-                <?php
-                // conect database
-                require 'server.php';
-                require 'pagination-v2.class.php';
-                $page = new PaginationV2();
+            <h1 class="text-center mt-5 mb-3">TCAS67</h1>
 
-                // check if user use date filter
-                if (empty($_POST['date'])) {
-                    $sql = "  SELECT * FROM news 
-                            WHERE category='tcas67' 
-                            ORDER BY UploadDate DESC";
-                    $result = $page->query($mysqli, $sql, 5);
-                } else {
-                    $UploadDate = $_POST['date'];
-                    $sql =  " SELECT * FROM news 
-                            WHERE category='tcas67' 
-                            AND UploadDate='$UploadDate'
-                            ORDER BY UploadDate DESC";
-                    $result = $page->query($mysqli, $sql, 5);
-                }
+            <?php
+            // conect database
+            require 'server.php';
+            require 'pagination-v2.class.php';
+            $page = new PaginationV2();
 
-                // get data
-                if ($result) {
-                    while ($dbarr = $result->fetch_assoc()) {
-                        $id = $dbarr['id'];
-                        $topic = $dbarr['topic'];
-                        $descr = $dbarr['descr'];
-                        $UploadDate = $dbarr['UploadDate'];
-                        $img = $dbarr['img'];
-                        $category = $dbarr['category'];
-                ?>
+            $sql =  "SELECT * FROM news 
+                        WHERE category='รอบรั้วเตรียมพัฒน์' 
+                        ORDER BY UploadDate DESC";
+            $result = $page->query($mysqli, $sql, 5);
+
+            // get data
+            if ($result) {
+                while ($dbarr = $result->fetch_assoc()) {
+                    $id = $dbarr['id'];
+                    $topic = $dbarr['topic'];
+                    $UploadDate = $dbarr['UploadDate'];
+                    $img = $dbarr['img'];
+                    $category = $dbarr['category'];
+                    echo <<<HTML
                         <!-- output -->
-                        <div class="box">
-                            <div class="img">
-                                <img src="<?= $img ?>">
-                            </div>
-                            <div class="content">
-                                <div class="topic">
-                                    <a href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
-                                </div>
-                                <div class="category-date">
-                                    <p class="category"><?= $category ?></p>
-                                    <p class="date"><?= $UploadDate ?></p>
+                        <div class="container " style="max-width: 50%;">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-6">
+                                        <img src="$img" class="img-fluid rounded-start">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body d-flex flex-column justify-content-between" style="height: 100%">
+                                            <div>
+                                                <a class="card-title fs-5 text-decoration-none" id="topic" href="show_detail.php?id=$id">$topic</a>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="card-text" style="margin: 0; color: #ee6fff;">$category</p>
+                                                <p class="card-text text-muted m-0">$UploadDate</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                <?php
-                    }
+                        HTML;
                 }
-                require('subpage/pagination.inc.php'); //pagination
-                $mysqli->close();
-                ?>
+            }
+            require('subpage/pagination.inc.php'); //pagination
+            $mysqli->close();
+            ?>
 
-            </div>
         </section>
         <?php require('subpage/footer.inc.php'); //footer
         ?>

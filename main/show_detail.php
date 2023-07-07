@@ -23,16 +23,15 @@ if ($result) {
     echo 'can not select data';
 }
 
-require('subpage/nav2.inc.php');
 require('subpage/head.inc.php');
 ?>
 
 <body class="d-flex flex-column min-vh-100">
     <?php
+    require('subpage/nav2.inc.php');
     require('subpage/arti.inc.php');
     require('subpage/footer.inc.php'); 
     ?>
-    
 </body>
 
 </html>

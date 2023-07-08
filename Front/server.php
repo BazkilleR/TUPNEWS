@@ -5,9 +5,9 @@ $password = '';
 $database = 'tup_news';
 
 // $servername = 'localhost';
-// $username = 'id20892323_tupnews_database';
-// $password = 'XUUljeGuDimIf1!';
-// $database = 'id20892323_tup_news';
+// $username = 'u152702107_tup41';
+// $password = 'S5+#;b+#d';
+// $database = 'u152702107_tup41';
 
 $mysqli = @(new mysqli($servername, $username, $password, $database));
 

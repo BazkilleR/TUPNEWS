@@ -1,45 +1,71 @@
-<?php require('subpage/head.inc.php');?>
-<body>
-    <?php require('subpage/nav2.inc.php');?>
-    <h1 class="title">ADMIN PANAL</h1>
-    <section class="grid-container">
-        <div class="menu">
-            <ul>
-                <li><a href="add_news.php">Add</a></li>
-                <li><a href="delete_news.php">Delete</a></li>
-                <li><a href="update_news.php">Update</a></li>
-            </ul>
-        </div>
-        <table class="database">
-            <tr>
-                <th style="width: 5%;">ID</th>
-                <th>TOPIC</th>
-                <th style="width: 15%;">CATEGORY</th>
-                <th style="width: 10%;">LEVEL</th>
-                <th style="width: 25%;">UPLOADDATE</th>
-            </tr>
-            <?php
-                require 'server.php';
-                mysqli_query($conn, 'USE tup_news;');
-                $query = mysqli_query($conn, 'SELECT * FROM news;');
-                while ($dbarr = mysqli_fetch_array($query)) {
-                    $id = $dbarr['id'];
-                    $topic = $dbarr['topic'];
-                    $level = $dbarr['level'];
-                    $UploadDate = $dbarr['UploadDate'];
-                    $category = $dbarr['category']; ?>
-                    <tr>
-                        <td><?php echo $id; ?></td>
-                        <td><a href="#"><?php echo $topic; ?></a></td>
-                        <td><?php echo $category; ?></td>
-                        <td><?php echo $level; ?></td>
-                        <td><?php echo $UploadDate; ?></td>
-                    </tr> <?php
-                } 
-            ?>
-        </table>
-    </section>
+<?php require('subpage/head.inc.php'); ?>
 
+<html>
+
+<body>
+    <?php require('subpage/nav2.inc.php'); ?>
+    <section>
+        <div class="container">
+            <p class="fs-1 text-center mt-3">ADMIN PANAL</p>
+            <div class="btn-group" role="group">
+                <a class="btn btn-success" href="add_news.php" role="button">Add</a>
+                <a class="btn btn-warning" href="update_news.php" role="button">Update</a>
+                <a class="btn btn-danger" href="delete_news.php" role="button">Delete</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-black">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">LV.</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Img</th>
+                            <th scope="col">Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        require 'server.php';
+
+                        $sql = 'SELECT * FROM news ORDER BY UploadDate DESC';
+                        $result = $mysqli->query($sql);
+
+                        if ($result) {
+                            while ($dbarr = $result->fetch_assoc()) {
+                                $id = $dbarr['id'];
+                                $topic = $dbarr['topic'];
+                                $content = $dbarr['content'];
+                                $level = $dbarr['level'];
+                                $UploadDate = $dbarr['UploadDate'];
+                                $category = $dbarr['category'];
+                                $img = $dbarr['img'];
+                                echo <<<HTML
+                                <tr>
+                                    <th scope="row">$id</th>
+                                    <td>$topic</td>
+                                    <td>$content</td>
+                                    <td>$category</td>
+                                    <td>$level</td>
+                                    <td>$UploadDate</td>
+                                    <td>$img</td>
+                                    <td id='option'>
+                                        <a class="btn btn-primary btn-warning" href="update_news.php?id=$id" role="button">Update</a>
+                                        <a class="btn btn-primary btn-danger" href="delete_news.php?id=$id" role="button">Delete</a>
+                                    </td>
+                                </tr>
+                            HTML;
+                            }
+                        }
+                        $mysqli->close();
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

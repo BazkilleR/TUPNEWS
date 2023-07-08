@@ -1,42 +1,51 @@
 .nav-link {
-  color: whitesmoke !important;
-}
-.searchi {
-  transform: translateY(+1px);
-}
-.navf {
-  font-size: 20px;
-  font-family: 'Prompt', sans-serif;
-}
-.blogo {
-  object-fit: cover;
-  width: 110px;
-  height: 50px;
-}
-.dropdown-item {
-  color: whitesmoke !important;
-}
-.dropdown > .dropdown-menu > .dropdown-item:hover {
-  box-shadow: none;
-  background-color: transparent;
-}
-/* fix navbar item when hover */
-.dropdown-menu > li > a {
-  color: white;
+    color: whitesmoke !important;
 }
 
-.dropdown-menu > li > a:hover {
-background-color: #182A54;
-background-image: none;
+.searchi {
+    transform: translateY(+1px);
 }
-.navbar > .navf > .navbar-toggler > .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='whitesmoke' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+.navf {
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
 }
-.navbar > .navf > .navbar-toggler {
-  border: 1px solid #182A54;
-  box-shadow: none;
+
+.blogo {
+    object-fit: cover;
+    width: 110px;
+    height: 50px;
 }
-.navbar > .navf > .navitem > .navbar-nav > .dropdown > .dropdown-menu {
-  background-color: #182A54; 
-  border-radius: 0;
+
+.dropdown-item {
+    color: whitesmoke !important;
+}
+
+.dropdown>.dropdown-menu>.dropdown-item:hover {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/* fix navbar item when hover */
+.dropdown-menu>li>a {
+    color: white;
+}
+
+.dropdown-menu>li>a:hover {
+    background-color: #182A54;
+    background-image: none;
+}
+
+.navbar>.navf>.navbar-toggler>.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='whitesmoke' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar>.navf>.navbar-toggler {
+    border: 1px solid #182A54;
+    box-shadow: none;
+}
+
+.navbar>.navf>.navitem>.navbar-nav>.dropdown>.dropdown-menu {
+    background-color: #182A54;
+    border-radius: 0;
 }

@@ -3,7 +3,7 @@
 require('server.php');
 
 // Check if all input fields are set
-$requiredFields = ['topic', 'descr', 'content', 'category', 'level'];
+$requiredFields = ['topic', 'content', 'category', 'level'];
 $isValidInput = true;
 
 foreach ($requiredFields as $field) {
@@ -15,7 +15,6 @@ foreach ($requiredFields as $field) {
 
 if ($isValidInput) {
     $topic = $_POST['topic'];
-    $descr = $_POST['descr'];
     $content = $_POST['content'];
     $category = $_POST['category'];
     $level = $_POST['level'];
@@ -32,12 +31,12 @@ if ($isValidInput) {
             $targetDir = 'news_img/';
             $fileImg = $targetDir . $fileName;
             $fileTemp = $_FILES['img']['tmp_name'];
-            
+
             if (move_uploaded_file($fileTemp, $fileImg)) {
                 // Insert data into the database using prepared statements
-                $query = "INSERT INTO news (topic, descr, content, category, level, UploadDate, img) VALUES (?, ?, ?, ?, ?, NOW(), ?)";
-                $stmt = mysqli_prepare($conn, $query);
-                mysqli_stmt_bind_param($stmt, 'ssssss', $topic, $descr, $content, $category, $level, $fileImg);
+                $query = "INSERT INTO news (topic, content, category, level, UploadDate, img) VALUES (?, ?, ?, ?, NOW(), ?)";
+                $stmt = mysqli_prepare($mysqli, $query);
+                mysqli_stmt_bind_param($stmt, 'sssss', $topic, $content, $category, $level, $fileImg);
                 $result = mysqli_stmt_execute($stmt);
 
                 if ($result) {
@@ -59,5 +58,4 @@ if ($isValidInput) {
 }
 
 // Disconnect from the database
-mysqli_close($conn);
-?>
+$mysqli->close();

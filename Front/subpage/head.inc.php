@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,9 @@
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/arti.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/category_news.css">
+    <link rel="stylesheet" href="css/add_new.css">
+    <link rel="icon" href="img/logo.PNG">
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2a167d09ca.js" crossorigin="anonymous"></script>
@@ -21,5 +25,5 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>TUP41CENTRE</title>
 </head>

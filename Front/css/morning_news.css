@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 html,
@@ -35,55 +36,42 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
-    gap: 2rem;
+    gap: 1rem;
 
     >.box {
         display: flex;
-        height: 250px;
+        min-height: 75px;
         width: 50%;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: #dfdfdf83;
 
-        >.img {
-            width: 50%;
-            overflow: hidden;
+        >div {
+            margin: 0.7rem;
+        }
 
-            >img {
-                height: auto;
-                width: 100%;
+        >.topic {
+            >a {
+                color: black;
+                font-size: 1.2rem;
+                text-decoration: none
+            }
+
+            >a:hover {
+                color: pink;
             }
         }
 
-        >.content {
+        >.category-date {
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
-            width: 50%;
-            padding: 0.7rem;
 
-            >.topic {
-                >a {
-                    text-decoration: none;
-                    color: black;
-                    font-size: 1.25rem;
-                }
+            >.category {
+                color: #ee6fff;
             }
 
-            >.descr {
-                opacity: 0.7;
-            }
-
-            >.category-date {
-                display: flex;
-                justify-content: space-between;
-
-                >p {
-                    margin: 0;
-                }
-
-                >.category {
-                    color: #ee6fff;
-                }
+            >p {
+                margin: 0;
             }
         }
     }

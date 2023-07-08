@@ -1,16 +1,18 @@
 /* * {
     border: 1px solid red;
   } */
-.arti, #arti {
+  .arti, #arti {
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
 }
-.arti > .imgarti > img {
-    width: 75%;
-    height: 75%;
+.mshowd {
+    flex-flow: column wrap;
+}
+.arti > .mshowd > .imgarti > img {
+    width: 100%;
+    max-width: 50rem;
+    height: auto;
     object-fit: cover;
     display: flex;
     justify-content: center;

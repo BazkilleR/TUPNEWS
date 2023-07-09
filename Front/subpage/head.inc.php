@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/category_news.css">
     <link rel="stylesheet" href="css/add_new.css">
+    <link rel="stylesheet" href="css/countdown.css">
     <link rel="icon" href="img/logo.PNG">
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>

@@ -106,10 +106,10 @@
           </div>
         </div>
         <!-- left column -->
-        <div class="col-lg-4 rwidget">
+        <div class="col-lg-4 rwidget mb-3">
           <div class="widget-blocks">
             <div class="row">
-              <div class="col-lg-12 col-md-6">
+              <div class="col-lg-12 col-md-6 rwcard">
                 <div class="widget">
                   <!-- button -->
                   <!-- <div class="d-grid gap-2 widget-head ">

@@ -3,7 +3,7 @@
 <body>
     <?php require('subpage/nav2.inc.php'); ?>
     <section>
-        <h1 class="text-center mt-5 mb-5">แคมป์</h1>
+        <h1 class="text-center mt-5 mb-5">ค่าย</h1>
 
         <?php
         // conect database
@@ -12,7 +12,7 @@
         $page = new PaginationV2();
 
         $sql =  "SELECT * FROM news 
-                WHERE category='แคมป์' 
+                WHERE category='ค่าย' 
                 ORDER BY UploadDate DESC";
         $result = $page->query($mysqli, $sql, 5);
 
@@ -21,7 +21,12 @@
             while ($dbarr = $result->fetch_assoc()) {
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
+
                 $UploadDate = $dbarr['UploadDate'];
+                // format jesusYear ti buddhishYear
+                $buddhistYear = intval(date('Y', strtotime($UploadDate))) + 543;
+                $buddhistDate = date('d/m/', strtotime($UploadDate)) . $buddhistYear;
+
                 $img = $dbarr['img'];
                 $category = $dbarr['category'];
                 echo <<<HTML
@@ -39,7 +44,7 @@
                                         </div>
                                         <div class="d-flex justify-content-between">
                                             <p class="card-text" style="margin: 0; color: #ee6fff;">$category</p>
-                                            <p class="card-text text-muted m-0">$UploadDate</p>
+                                            <p class="card-text text-muted m-0">$buddhistDate</p>
                                         </div>
                                     </div>
                                 </div>

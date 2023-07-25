@@ -6,9 +6,9 @@
       </div> -->
       <div class="row no-gutters-lg ">
         <div class="col-xl-8 mb-5 mb-lg-0">
-          <div class="mt-3">
+          <!-- <div class="mt-3">
             <h1 class="line2">ข่าวสารล่าสุด</h1>
-          </div>
+          </div> -->
           <div class="row">
             <?php
             // connect db
@@ -23,9 +23,15 @@
               while ($dbarr = $result->fetch_assoc()) {
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
+
                 $content = $dbarr['content'];
                 $formattedContent = nl2br($content);
+
                 $UploadDate = $dbarr['UploadDate'];
+                // format jesusYear ti buddhishYear
+                $buddhistYear = intval(date('Y', strtotime($UploadDate))) + 543;
+                $buddhistDate = date('d-m-', strtotime($UploadDate)) . $buddhistYear;
+
                 $category = $dbarr['category'];
                 $img = $dbarr['img'];
 
@@ -36,7 +42,7 @@
                       <a href="article.html">
                         <div class="card-image">
                           <div class="post-info">
-                            <span class="text-uppercase"><?= $UploadDate ?></span>
+                            <span class="text-uppercase"><?= $buddhistDate ?></span>
                           </div>
                           <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                         </div>
@@ -62,7 +68,7 @@
                       <a href="article.html">
                         <div class="card-image">
                           <div class="post-info">
-                            <span class="text-uppercase"><?= $UploadDate ?></span>
+                            <span class="text-uppercase"><?= $buddhistDate ?></span>
                           </div>
                           <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                         </div>
@@ -129,9 +135,15 @@
                           $id = $dbarr['id'];
                           $topic = $dbarr['topic'];
                           $content = $dbarr['content'];
+
                           $content = $dbarr['content'];
                           $formattedContent = nl2br($content);
+
                           $UploadDate = $dbarr['UploadDate'];
+                          // format jesusYear ti buddhishYear
+                          $buddhistYear = intval(date('Y', strtotime($UploadDate))) + 543;
+                          $buddhistDate = date('d-m-', strtotime($UploadDate)) . $buddhistYear;
+
                           $category = $dbarr['category'];
                           $img = $dbarr['img'];
 
@@ -140,7 +152,7 @@
                             <article class="card mb-4 round-0 border-0">
                               <div class="card-image">
                                 <div class="post-info">
-                                  <span class="text-uppercase"><?= $UploadDate ?></span>
+                                  <span class="text-uppercase"><?= $buddhistDate ?></span>
                                 </div>
                                 <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                               </div>

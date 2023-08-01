@@ -50,7 +50,7 @@
                       <div class="card-body px-0 pb-1">
                         <ul class="post-meta mb-2">
                           <li>
-                            <a class="second" id="second" style="position: relative; z-index: 2;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                            <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                           </li>
                         </ul>
                         <h2>
@@ -76,7 +76,7 @@
                       <div class="card-body px-0 pb-0">
                         <ul class="post-meta mb-2">
                           <li>
-                            <a style="position: relative; z-index: 2;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                            <a style="position: relative; z-index: 2; text-decoration: none;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                           </li>
                         </ul>
                         <h2>
@@ -180,8 +180,8 @@
                                     <!-- <div>
                                       <p class="post-title post-title-sm" id="sub-topic"><?= $formattedContent ?></p>
                                     </div> -->
-                                    <div>
-                                      <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                                    <div class="cata">
+                                      <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: black;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                                     </div>
                                   </div>
                                 </div>

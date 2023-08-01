@@ -3,8 +3,35 @@
 <body class="d-flex flex-column min-vh-100">
     <?php require('subpage/nav2.inc.php'); ?>
     <section>
-        <h1 class="text-center mt-5 mb-5">TCAS67</h1>
-
+        <h1 class="text-center mt-5 mb-4">TCAS67</h1>
+        <div class="container-fluid">
+            <div class="mb-5 Timer">
+                <div class="card text-center round-5">
+                    <h3 class="card-header" style="background-color: pink; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;">Tgat</h3> 
+                    <div class="card-body">
+                        <h4 id="timer"></h4>
+                    </div>
+                </div>
+                <div class="card text-center" >
+                    <h3 class="card-header" style="background-color: #1E51DE; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;">Tpat</h3>
+                    <div class="card-body">
+                        <h4 id="timer1"></h4>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h3 class="card-header" style="background-color: #FFBF00; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;">กสพท</h3>
+                    <div class="card-body">
+                        <h4 id="timer2"></h4>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h3 class="card-header" style="background-color: #990F02; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;">A-level</h3>
+                    <div class="card-body">
+                        <h4 id="timer3"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php
         // conect database
         require 'server.php';

@@ -16,7 +16,6 @@
                     <ul class="dropdown-menu border-0" id="dropdown-menu">
                         <li><a class="dropdown-item " href="morning_news.php">ข่าวสารหน้าเสาธง</a></li>
                         <li><a class="dropdown-item" href="tcas67_news.php">TCAS67</a></li>
-                        <li><a class="dropdown-item" href="camp_news.php">ค่าย</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown arrow-hidden">

@@ -1,10 +1,44 @@
 <?php require('subpage/head.inc.php'); ?>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php require('subpage/nav2.inc.php'); ?>
     <section>
-        <h1 class="text-center mt-5 mb-5">TCAS67</h1>
-
+        <h1 class="text-center mt-5 mb-4" style="font-weight: bolder; font-size: 4rem">TCAS67</h1>
+        <div class="container-fluid">
+            <div class="mb-5 Timer">
+                <div class="card text-center round-5">
+                    <h3 class="card-header" style="background-color: #F07C1C; color: whitesmoke; border-radius: 0.5em 0.5em 0 0; ">TGAT</h3> 
+                    <div class="card-body p-0">
+                        <h4 class="mt-2 mb-0" id="timer"></h4>
+                        <h2>Day</h2>
+                    </div>
+                </div>
+                <div class="card text-center" >
+                    <h3 class="card-header" style="background-color: #1E51DE; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;">TPAT</h3>
+                    <div class="card-body p-0">
+                        <h4 class="mt-2 mb-0" id="timer1"></h4>
+                        <h2>Day</h2>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h3 class="card-header" style="background-color: #058B04; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;">กสพท</h3>
+                    <div class="card-body p-0">
+                        <h4 class="mt-2 mb-0" id="timer2"></h4>
+                        <h2>Day</h2>
+                    </div>
+                </div>
+                <div class="card text-center" >
+                    <h3 class="card-header" style="background-color: #C1272D; color: whitesmoke; border-radius: 0.5em 0.5em 0 0;  ">A-Level</h3>
+                    <div class="card-body p-0">
+                        <h4 class="mt-2 mb-0" id="timer3"></h4>
+                        <h2>Day</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="m-3 d-flex justify-content-center align-items-center img1">
+            <img class="imgtcas" src="img/TCAS.jpg">
+        </div> -->
         <?php
         // conect database
         require 'server.php';

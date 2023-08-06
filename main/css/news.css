@@ -72,4 +72,35 @@
   flex-flow: row wrap;
 }
 
-/* morning news */
+/* tcas news */
+.Timer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+.Timer > .card {
+  width: 17vh;
+  height: 100%;
+  border-radius: 1em;
+}
+.Timer > .card > .card-body > h4  {
+  font-size: 2.8rem;
+  font-weight: bolder;
+}
+.Timer > .card > .card-body > h2  {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+/* @media screen (max-width: 1200px) {
+  .img1 > .imgtcas {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+  .img1 > .imgtcas {
+    width: 75%;
+    height: 100%;
+  } */

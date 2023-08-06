@@ -31,7 +31,6 @@
                 <select class="form-select" name="category">
                     <option selected>กรุณาเลือกหมวดหมู่</option>
                     <option value="รอบรั้วเตรียมพัฒน์">รอบรั้วเตรียมพัฒน์</option>
-                    <option value="แคมป์">แคมป์</option>
                     <option value="TCAS67">TCAS67</option>
                 </select>
             </div>

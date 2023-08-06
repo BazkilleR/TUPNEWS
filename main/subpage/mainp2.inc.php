@@ -44,13 +44,13 @@
                           <div class="post-info">
                             <span class="text-uppercase"><?= $buddhistDate ?></span>
                           </div>
-                          <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
+                          <img loading="lazy"  decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                         </div>
                       </a>
                       <div class="card-body px-0 pb-1">
                         <ul class="post-meta mb-2">
                           <li>
-                            <a class="second" id="second" style="position: relative; z-index: 2;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                            <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                           </li>
                         </ul>
                         <h2>
@@ -64,24 +64,27 @@
                 } else { ?>
                   <!-- news -->
                   <div class="col-md-6 mb-4">
-                    <article class="card article-card article-card-sm h-100 border-0">
+                    <article class="card article-card article-card-sm h-100 border-0 p-0">
                       <a href="article.html">
-                        <div class="card-image">
-                          <div class="post-info">
-                            <span class="text-uppercase"><?= $buddhistDate ?></span>
-                          </div>
-                          <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
+                        <div class="card-image1">
+                          
+                          <img loading="lazy" style="border-radius: 0; width: 20vh; height: 25vh; object-fit: cover; position: relative;" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                         </div>
                       </a>
                       <div class="card-body px-0 pb-0">
-                        <ul class="post-meta mb-2">
-                          <li>
-                            <a style="position: relative; z-index: 2;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
-                          </li>
-                        </ul>
+                        
                         <h2>
                           <a class="post-title stretched-link" href="show_detail.php?id=<?php echo $id ?>"><?= $topic ?></a>
                         </h2>
+                        <ul class="post-meta mb-2">
+                          <li>
+                            <a style="position: relative; z-index: 2; text-decoration: none;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                            
+                            <span class="text-uppercase"><?= $buddhistDate ?></span>
+                        
+                          </li>
+                          
+                        </ul>
                         <!-- <p class="card-text" id="descr-content"><?= $formattedContent ?></p> -->
                       </div>
                     </article>
@@ -106,10 +109,10 @@
           </div>
         </div>
         <!-- left column -->
-        <div class="col-lg-4 rwidget">
+        <div class="col-lg-4 rwidget mb-3">
           <div class="widget-blocks">
             <div class="row">
-              <div class="col-lg-12 col-md-6">
+              <div class="col-lg-12 col-md-6 rwcard">
                 <div class="widget">
                   <!-- button -->
                   <!-- <div class="d-grid gap-2 widget-head ">
@@ -154,7 +157,7 @@
                                 <div class="post-info">
                                   <span class="text-uppercase"><?= $buddhistDate ?></span>
                                 </div>
-                                <img loading="lazy" decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
+                                <img loading="lazy"  decoding="async" src="<?= $img ?>" alt="Post Thumbnail" class="w-100">
                               </div>
                               <div class="card-body p-3">
                                 <h3>
@@ -163,12 +166,13 @@
                                 <!-- <p class="card-text" id="descr-content"><?= $formattedContent ?></p> -->
                               </div>
                             </article>
+                            <hr class="hr" />
                           <?php
                           } else { ?>
-                            <div class="card h-100 mb-3 round-0 border-0 ">
+                            <div class="card h-100 mb-3 round-0 border-0 leftnews">
                               <div class="row g-0">
-                                <div class="col-md-4">
-                                  <img src="<?= $img ?>" style="height: 100%; width: 100%; object-fit: cover;">
+                                <div class="col-md-4 cardimg">
+                                  <img src="<?= $img ?>" style="height: 9vh; width: 12vh; object-fit: cover;">
                                 </div>
                                 <div class="col-md-8">
                                   <div class="card-body">
@@ -180,13 +184,14 @@
                                     <!-- <div>
                                       <p class="post-title post-title-sm" id="sub-topic"><?= $formattedContent ?></p>
                                     </div> -->
-                                    <div>
-                                      <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: #FFB6C1;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
+                                    <div class="cata">
+                                      <a class="second" id="second" style="position: relative; z-index: 2; text-decoration: none; color: black;" href="<?php echo $category ?>_news.php"><?= $category ?></a>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
+                            <hr class="hr" />
                       <?php
                           }
                           ++$count;

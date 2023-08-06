@@ -1,6 +1,6 @@
 <?php require('subpage/head.inc.php'); ?>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php require('subpage/nav2.inc.php'); ?>
     <section>
         <h1 class="text-center mt-5 mb-5">ข่าวรอบรั้วเตรียมพัฒน์</h1>

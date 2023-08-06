@@ -26,3 +26,5 @@
   <?php require('subpage/mainp2.inc.php'); ?>
   <?php require('subpage/footer.inc.php'); ?>
 </body>
+
+</html>

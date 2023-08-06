@@ -52,9 +52,16 @@ if (isset($_GET['id'])) {
 
     // Check update status
     if ($result) {
-        echo 'Update successful<br>';
-        echo "<a href='index.php'>HOME</a><br>";
-        echo "<a href='admin.php'>ADMIN</a><br>";
+        echo <<<HTML
+            <div class="container-sm text-center p-3 " style="max-width: 700px;">
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading">Update successfully!</h4>
+                    <hr>
+                    <a class="btn btn-success" href="index.php" role="button">HOME</a>
+                    <a class="btn btn-danger" href="admin.php" role="button">ADMIN</a>
+                </div>
+            </div>
+        HTML;
     } else {
         echo 'Update failed';
     }

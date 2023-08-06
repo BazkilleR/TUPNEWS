@@ -1,3 +1,5 @@
+<?php require('subpage/head.inc.php'); ?>
+
 <?php
 // Connect to the database
 require('server.php');
@@ -40,7 +42,16 @@ if ($isValidInput) {
                 $result = mysqli_stmt_execute($stmt);
 
                 if ($result) {
-                    echo 'Add data successfully';
+                    echo <<<HTML
+                        <div class="container-sm text-center p-3 " style="max-width: 700px;">
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Add successfully!</h4>
+                                <hr>
+                                <a class="btn btn-success" href="index.php" role="button">HOME</a>
+                                <a class="btn btn-danger" href="admin.php" role="button">ADMIN</a>
+                            </div>
+                        </div>
+                    HTML;
                 } else {
                     echo 'Add data failure';
                 }

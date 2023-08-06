@@ -1,3 +1,5 @@
+<?php require('subpage/head.inc.php'); ?>
+
 <?php
 require('server.php'); // Connect to the database
 
@@ -20,7 +22,7 @@ if (isset($_GET['id'])) {
         if (in_array($fileType, $allowedTypes)) {
             // Delete old image file
             $query = "SELECT img FROM news WHERE id='$id'";
-            $result = mysqli_query($conn, $query);
+            $result = mysqli_query($mysqli, $query);
             $row = mysqli_fetch_assoc($result);
             $oldImage = $row['img'];
             unlink($oldImage);

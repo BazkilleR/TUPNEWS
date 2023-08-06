@@ -1,3 +1,5 @@
+<?php require('subpage/head.inc.php'); ?>
+
 <?php
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
@@ -22,9 +24,16 @@ if (isset($_POST['id'])) {
                 
                 if ($result) {
                     // Deletion successful
-                    echo 'Delete Successfully.<br>';
-                    echo "<a href='index.php'>HOME</a><br>";
-                    echo "<a href='admin.php'>ADMIN</a>";
+                    echo <<<HTML
+                        <div class="container-sm text-center p-3 " style="max-width: 700px;">
+                            <div class="alert alert-danger" role="alert">
+                                <h4 class="alert-heading">Delete successfully!</h4>
+                                <hr>
+                                <a class="btn btn-success" href="index.php" role="button">HOME</a>
+                                <a class="btn btn-danger" href="admin.php" role="button">ADMIN</a>
+                            </div>
+                        </div>
+                    HTML;
                 } else {
                     echo 'Deletion failed.';
                 }

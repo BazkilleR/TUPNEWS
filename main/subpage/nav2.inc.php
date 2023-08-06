@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg sticky-top" id="navbar_top" style="background-color: #182A54;">
     <div class="container-fluid navf">
-        <a href="index.php" class="navbar-brand me-auto" style="color: whitesmoke;">
+        <a href="main.php" class="navbar-brand me-auto" style="color: whitesmoke;">
             <img src="img/TUP41NEWS.png" alt="Logo" class="blogo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive" aria-expanded="false" aria-label="Toggle navigation" style="">
@@ -14,14 +14,13 @@
             <div class="offcanvas-body" style="background-color: #182A54;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">หน้าหลัก</a>
+                        <a class="nav-link" href="main.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item dropdown arrow-hidden" id="nav-link">
                         <a class="nav-link " href="#" id="nav-link" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">ข่าวสาร</a>
                         <ul class="dropdown-menu border-0" id="dropdown-menu">
                             <li><a class="dropdown-item" href="morning_news.php">รอบรั้วเตรียมพัฒน์</a></li>
                             <li><a class="dropdown-item" href="tcas67_news.php">TCAS67</a></li>
-                            <li><a class="dropdown-item" href="camp_news.php">ค่าย</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown arrow-hidden">

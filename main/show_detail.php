@@ -13,6 +13,7 @@ if ($result) {
         $id = $dbarr['id'];
         $img = $dbarr['img'];
         $topic = $dbarr['topic'];
+        $descr = $dbarr['descr'];
         $content = $dbarr['content'];
         $formattedContent = nl2br($content);
         $category = $dbarr['category'];
@@ -32,6 +33,7 @@ require('subpage/head.inc.php');
     require('subpage/arti.inc.php');
     require('subpage/footer.inc.php'); 
     ?>
+    <script src="js/newline.js"></script>
 </body>
 
 </html>

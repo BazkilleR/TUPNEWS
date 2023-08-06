@@ -1,6 +1,6 @@
 <?php require('subpage/head.inc.php'); ?>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php require('subpage/nav2.inc.php'); ?>
     <section>
         <div class="container mt-5">
@@ -46,9 +46,15 @@
                             while ($dbarr = $result->fetch_assoc()) {
                                 $id = $dbarr['id'];
                                 $topic = $dbarr['topic'];
+
                                 $content = $dbarr['content'];
                                 $formattedContent = nl2br($content);
+
                                 $UploadDate = $dbarr['UploadDate'];
+                                // format jesusYear ti buddhishYear
+                                $buddhistYear = intval(date('Y', strtotime($UploadDate))) + 543;
+                                $buddhistDate = date('d/m/', strtotime($UploadDate)) . $buddhistYear;
+
                                 $img = $dbarr['img'];
                                 $category = $dbarr['category'];
                                 echo <<<HTML
@@ -66,7 +72,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-between">
                                                         <p class="card-text" style="margin: 0; color: #ee6fff;">$category</p>
-                                                        <p class="card-text text-muted m-0">$UploadDate</p>
+                                                        <p class="card-text text-muted m-0">$buddhistDate</p>
                                                     </div>
                                                 </div>
                                             </div>

@@ -39,8 +39,8 @@ if (isset($_POST['id'])) {
         <div class="mb-3">
             <label for="category" class="form-label">หมวดหมู่</label>
             <select class="form-select" name="category" selected="$category">
+                <option selected>กรุณาเลือกหมวดหมู่</option>
                 <option value="รอบรั้วเตรียมพัฒน์">รอบรั้วเตรียมพัฒน์</option>
-                <option value="แคมป์">แคมป์</option>
                 <option value="TCAS67">TCAS67</option>
             </select>
         </div>

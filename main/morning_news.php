@@ -4,7 +4,12 @@
     <?php require('subpage/nav2.inc.php'); ?>
     <section>
         <h1 class="text-center mt-5 mb-5">ข่าวรอบรั้วเตรียมพัฒน์</h1>
-
+        <div class="date-filter">
+            <form action="" method="post">
+                <input type="date" name="date">
+                <input type="submit" value="ยืนยัน">
+            </form>
+        </div>
         <?php
         // conect database
         require 'server.php';

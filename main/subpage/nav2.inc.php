@@ -29,7 +29,7 @@
                             <li><a class="dropdown-item" href="http://43.229.77.153/~ztrad/tup_conn34/">รายงานผลการเรียน</a></li>
                             <li><a class="dropdown-item hover-shadow" href="https://drive.google.com/file/d/1_6ixfzVUNu7TZ-07vNhZLch_1B2pF94d/view?usp=sharing">ใบลาเรียน</a></li>
                             <li><a class="dropdown-item" href="https://anyflip.com/gmahn/zzze/">คู่มือนักเรียน</a></li>
-                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1kqNrbf8K8eV9lP3C4yOq546i6JwIRMHm/view?usp=drive_link">ตารางเรียน</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/18fDejn9ypXfOT6QpfqY1nSMaN_EZepAS/view?usp=sharing">ตารางเรียน</a></li>
                             <li><a class="dropdown-item" href="http://www.tup.ac.th/images/news-academic/_ม.6_เทอม_1_ปีการศึกษา_2566_.pdf">ภาระงาน ม.6</a></li>
                             <li><a class="dropdown-item" href="http://www.tup.ac.th/downloads/calendar-2566.pdf">ปฎิทินประจำปีการศึกษา 2566</a></li>
                             <li><a class="dropdown-item" href="palace.php">ขั้นตอนการขอใบ ปพ.</a></li>

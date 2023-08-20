@@ -23,6 +23,9 @@
               while ($dbarr = $result->fetch_assoc()) {
                 $id = $dbarr['id'];
                 $topic = $dbarr['topic'];
+                if (strlen($topic) > 50) {
+                  $topic = mb_substr($topic, 0, 50) . '...';
+                }
 
                 $content = $dbarr['content'];
                 $formattedContent = nl2br($content);
@@ -137,6 +140,10 @@
                         while ($dbarr = $result->fetch_assoc()) {
                           $id = $dbarr['id'];
                           $topic = $dbarr['topic'];
+                          if (strlen($topic) > 40) {
+                            $topic = mb_substr($topic, 0, 40) . '...';
+                          }
+
                           $content = $dbarr['content'];
 
                           $content = $dbarr['content'];

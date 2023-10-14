@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+.head-title {
+    border-left: 5px solid pink;
+    padding-left: 0.75rem;
+}
+
+.card-img {
+    object-fit: cover;
+}
+
+.small-screen-news {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .large-screen-news {
+        display: none;
+    }
+
+    .small-screen-news {
+        display: block;
+    }
+}

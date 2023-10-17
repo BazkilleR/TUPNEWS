@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/category_news.css">
     <link rel="stylesheet" href="css/add_new.css">
     <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/home_boot.css">
     <link rel="icon" href="img/logo.PNG">
     <script defer src="js/main.js"></script>
     <script defer src="js/timer.js"></script>

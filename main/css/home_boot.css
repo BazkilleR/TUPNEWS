@@ -29,3 +29,26 @@
         display: block;
     }
 }
+
+.card-img-overlay {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(227, 227, 227, 0) 30%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+#category-text {
+    z-index: 5;
+}
+
+#category-text:hover {
+    font-weight: bold;
+}
+
+.stretched-link:hover {
+    color: #ff34e1;
+    transition: 0.5s;
+}

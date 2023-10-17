@@ -14,7 +14,7 @@
             <div class="offcanvas-body" style="background-color: #182A54;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="main.php">หน้าหลัก</a>
+                        <a class="nav-link" href="index.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item dropdown arrow-hidden" id="nav-link">
                         <a class="nav-link " href="#" id="nav-link" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">ข่าวสาร</a>

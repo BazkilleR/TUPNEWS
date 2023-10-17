@@ -20,7 +20,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
     .large-screen-news {
         display: none;
     }

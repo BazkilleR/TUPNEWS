@@ -32,6 +32,12 @@
                         $buddhist_date = date('d-m-', strtotime($UploadDate)) . $buddhist_year;
 
                         $category = $dbarr['category'];
+                        if ($category === "รอบรั้วเตรียมพัฒน์") {
+                            $category_link = "morning";
+                        } else if ($category === "TCAS67") {
+                            $category_link = "tcas67";
+                        }
+
                         $img = $dbarr['img'];
 
                         if ($count == 0) {
@@ -46,7 +52,7 @@
                                                 <?= $topic ?>
                                             </a>
                                             <div class="d-flex gap-2">
-                                                <a href="<?= $category ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
+                                                <a href="<?= $category_link ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
                                                     <?= $category ?>
                                                 </a>
                                                 <p class="mb-0" style="color: white;"><?= $buddhist_date ?></p>
@@ -72,7 +78,7 @@
                                                         <?= $topic ?>
                                                     </a>
                                                     <div class="d-flex justify-content-between" style="font-size: .8rem;">
-                                                        <a href="<?= $category ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
+                                                        <a href="<?= $category_link ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
                                                             <?= $category ?>
                                                         </a>
                                                         <p class="mb-0"><?= $buddhist_date ?></p>
@@ -90,7 +96,7 @@
                                                 <?= $topic ?>
                                             </a>
                                             <div class="d-flex justify-content-between" style="font-size: .8rem;">
-                                                <a href="<?= $category ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
+                                                <a href="<?= $category_link ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
                                                     <?= $category ?>
                                                 </a>
                                                 <p class="mb-0"><?= $buddhist_date ?></p>
@@ -136,6 +142,12 @@
                         $buddhist_date = date('d-m-', strtotime($UploadDate)) . $buddhist_year;
 
                         $category = $dbarr['category'];
+                        if ($category === "รอบรั้วเตรียมพัฒน์") {
+                            $category_link = "morning";
+                        } else if ($category === "TCAS67") {
+                            $category_link = "tcas67";
+                        }
+
                         $img = $dbarr['img'];
 
                         if ($count == 0) { ?>
@@ -149,7 +161,7 @@
                                                 <?= $topic ?>
                                             </a>
                                             <div class="d-flex justify-content-between" style="font-size: .8rem;">
-                                                <a href="<?= $category ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
+                                                <a href="<?= $category_link ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
                                                     <?= $category ?>
                                                 </a>
                                                 <p class="mb-0"><?= $buddhist_date ?></p>
@@ -172,7 +184,7 @@
                                                         <?= $topic ?>
                                                     </a>
                                                     <div class="d-flex justify-content-between" style="font-size: .8rem;">
-                                                        <a href="<?= $category ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
+                                                        <a href="<?= $category_link ?>_news.php" id="category-text" class="card-title text-decoration-none mb-0" style="color: #ffb7e0;">
                                                             <?= $category ?>
                                                         </a>
                                                         <p class="mb-0"><?= $buddhist_date ?></p>

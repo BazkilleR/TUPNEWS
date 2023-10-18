@@ -1,5 +1,5 @@
 <?php
-// connect sdatabase
+// connect database
 require 'server.php';
 
 // get id from url
@@ -13,9 +13,10 @@ if ($result) {
         $id = $dbarr['id'];
         $img = $dbarr['img'];
         $topic = $dbarr['topic'];
-        $descr = $dbarr['descr'];
+
         $content = $dbarr['content'];
         $formattedContent = nl2br($content);
+
         $category = $dbarr['category'];
         $level = $dbarr['level'];
         $UploadDate = $dbarr['UploadDate'];
@@ -31,7 +32,7 @@ require('subpage/head.inc.php');
     <?php
     require('subpage/nav2.inc.php');
     require('subpage/arti.inc.php');
-    require('subpage/footer.inc.php'); 
+    require('subpage/footer.inc.php');
     ?>
     <script src="js/newline.js"></script>
 </body>

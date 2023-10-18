@@ -32,7 +32,7 @@
                             <li><a class="dropdown-item" href="https://drive.google.com/file/d/18fDejn9ypXfOT6QpfqY1nSMaN_EZepAS/view?usp=sharing">ตารางเรียน</a></li>
                             <li><a class="dropdown-item" href="http://www.tup.ac.th/images/news-academic/_ม.6_เทอม_1_ปีการศึกษา_2566_.pdf">ภาระงาน ม.6</a></li>
                             <li><a class="dropdown-item" href="http://www.tup.ac.th/downloads/calendar-2566.pdf">ปฎิทินประจำปีการศึกษา 2566</a></li>
-                            <li><a class="dropdown-item" href="palace.php">ขั้นตอนการขอใบ ปพ.</a></li>
+                            <li><a class="dropdown-item" href="porpho.php">ขั้นตอนการขอใบ ปพ.</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown arrow-hidden">

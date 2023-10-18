@@ -34,7 +34,7 @@
                     <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">ติดต่อ</a>
                     <ul class="dropdown-menu border-0" id="dropdown-menu">
                         <li><a class="dropdown-item" href="contact.php">คุณครูเตรียม</a></li>
-                        <li><a class="dropdown-item" href="palace.php">ทำเนียบคณะกรรมการ ม.6</a></li>
+                        <li><a class="dropdown-item" href="porpho.php">ทำเนียบคณะกรรมการ ม.6</a></li>
                     </ul>
                 </li>
                 <li class="nav-item active">

@@ -3,7 +3,7 @@
         <a href="main.php" class="navbar-brand me-auto" style="color: whitesmoke;">
             <img src="img/TUP41NEWS.png" alt="Logo" class="blogo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
@@ -14,7 +14,7 @@
             <div class="offcanvas-body" style="background-color: #182A54;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="main.php">หน้าหลัก</a>
+                        <a class="nav-link" href="index.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item dropdown arrow-hidden" id="nav-link">
                         <a class="nav-link " href="#" id="nav-link" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">ข่าวสาร</a>

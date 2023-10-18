@@ -56,6 +56,9 @@
                 while ($dbarr = $result->fetch_assoc()) {
                     $id = $dbarr['id'];
                     $topic = $dbarr['topic'];
+                    if (strlen($topic) > 50) {
+                        $topic = mb_substr($topic, 0, 50) . '...';
+                    }
 
                     $UploadDate = $dbarr['UploadDate'];
                     // format jesusYear ti buddhishYear

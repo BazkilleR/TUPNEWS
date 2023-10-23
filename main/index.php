@@ -5,13 +5,16 @@
   <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/2.png" class="d-block w-100" alt="first">
+        <img src="img/29377_0.jpg" class="d-block w-100" alt="first">
       </div>
       <div class="carousel-item">
-        <img src="img/1.png" class="d-block w-100" alt="second">
+        <img src="img/29378_0.jpg" class="d-block w-100" alt="second">
       </div>
       <div class="carousel-item">
-        <img src="img/3 (1).png" class="d-block w-100" alt="third">
+        <img src="img/29379_0.jpg" class="d-block w-100" alt="third">
+      </div>
+      <div class="carousel-item">
+        <img src="img/1.png" class="d-block w-100" alt="fourth">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
